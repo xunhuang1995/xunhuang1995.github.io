@@ -1,0 +1,6 @@
+@inproceedings{huang2017sgan,
+  title={Stacked Generative Adversarial Networks},
+  author={Huang, Xun and Li, Yixuan and Poursaeed, Omid and Hopcroft, John and Belongie, Serge},
+  booktitle={CVPR},
+  year={2017}
+}

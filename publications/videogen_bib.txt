@@ -1,0 +1,6 @@
+@inproceedings{hao2018controllable,
+  title={Controllable Video Generation with Sparse Trajectories},
+  author={Hao, Zekun and Huang, Xun and Belongie, Serge},
+  booktitle={CVPR},
+  year={2018}
+}

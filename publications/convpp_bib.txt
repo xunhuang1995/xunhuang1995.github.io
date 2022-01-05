@@ -1,0 +1,6 @@
+@inproceedings{xie2016top,
+  title={Top-Down Learning for Structured Labeling with Convolutional Pseudoprior},
+  author={Xie, Saining and Huang, Xun and Tu, Zhuowen},
+  booktitle={ECCV},
+  year={2016}
+}
