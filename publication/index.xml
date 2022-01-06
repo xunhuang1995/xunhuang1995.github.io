@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Xun Huang</title>
-    <link>http://www.cs.cornell.edu/~xhuang/publication/</link>
+    <link>https://www.xunhuang.me/publication/</link>
     <description>Recent content in Publications on Xun Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Xun Huang</copyright>
     <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.cs.cornell.edu/~xhuang/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.xunhuang.me/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/pointflow/</link>
+      <link>https://www.xunhuang.me/publication/pointflow/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/pointflow/</guid>
+      <guid>https://www.xunhuang.me/publication/pointflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Few-shot Unsupervised Image-to-Image Translation</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/funit/</link>
+      <link>https://www.xunhuang.me/publication/funit/</link>
       <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/funit/</guid>
+      <guid>https://www.xunhuang.me/publication/funit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multimodal Unsupervised Image-to-Image Translation</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/munit/</link>
+      <link>https://www.xunhuang.me/publication/munit/</link>
       <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/munit/</guid>
+      <guid>https://www.xunhuang.me/publication/munit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning to Evaluate Image Captioning</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/captioning/</link>
+      <link>https://www.xunhuang.me/publication/captioning/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/captioning/</guid>
+      <guid>https://www.xunhuang.me/publication/captioning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Controllable Video Generation with Sparse Trajectories</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/videogen/</link>
+      <link>https://www.xunhuang.me/publication/videogen/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/videogen/</guid>
+      <guid>https://www.xunhuang.me/publication/videogen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/adain/</link>
+      <link>https://www.xunhuang.me/publication/adain/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/adain/</guid>
+      <guid>https://www.xunhuang.me/publication/adain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stacked Generative Adversarial Networks</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/sgan/</link>
+      <link>https://www.xunhuang.me/publication/sgan/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/sgan/</guid>
+      <guid>https://www.xunhuang.me/publication/sgan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Top-Down Learning for Structured Labeling with Convolutional Pseudoprior</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/convpp/</link>
+      <link>https://www.xunhuang.me/publication/convpp/</link>
       <pubDate>Tue, 26 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/convpp/</guid>
+      <guid>https://www.xunhuang.me/publication/convpp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SALICON: Reducing the Semantic Gap in Saliency Prediction by Adapting Deep Neural Networks</title>
-      <link>http://www.cs.cornell.edu/~xhuang/publication/salicon/</link>
+      <link>https://www.xunhuang.me/publication/salicon/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://www.cs.cornell.edu/~xhuang/publication/salicon/</guid>
+      <guid>https://www.xunhuang.me/publication/salicon/</guid>
       <description></description>
     </item>
     
