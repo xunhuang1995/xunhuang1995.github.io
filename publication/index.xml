@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Xun Huang</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.xunhuang.me/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multimodal Conditional Image Synthesis with Product-of-Experts GANs</title>
+      <link>https://www.xunhuang.me/publication/poegan/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/poegan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</title>
+      <link>https://www.xunhuang.me/publication/gan_survey/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/gan_survey/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows</title>

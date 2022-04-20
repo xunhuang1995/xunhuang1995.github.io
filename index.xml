@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Xun Huang</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.xunhuang.me/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,24 @@ Conference reviewer: NeurIPS, ICML, UAI, SIGGRAPH, SIGGRAPH Asia, ICCV, CVPR, &a
       <guid>https://www.xunhuang.me/home/teaching/</guid>
       <description>Teaching Assistant:
  Fall 2017 and 2019, CS5785 Applied Machine Learning. Fall 2016, CS4320 Introduction to Database Systems.  </description>
+    </item>
+    
+    <item>
+      <title>Multimodal Conditional Image Synthesis with Product-of-Experts GANs</title>
+      <link>https://www.xunhuang.me/publication/poegan/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/poegan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</title>
+      <link>https://www.xunhuang.me/publication/gan_survey/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/gan_survey/</guid>
+      <description></description>
     </item>
     
     <item>

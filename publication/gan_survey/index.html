@@ -20,9 +20,9 @@
 
 
     <link rel="shortcut icon" href="https://www.xunhuang.me/img/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://www.xunhuang.me/publication/pointflow/">
+    <link rel="canonical" href="https://www.xunhuang.me/publication/gan_survey/">
 
-    <title>PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows | Xun Huang</title>
+    <title>Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications | Xun Huang</title>
 
 </head>
 <body id="top">
@@ -66,10 +66,10 @@
 
     <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
         <div class="pub-title">
-            <h1 itemprop="name">PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows</h1>
+            <h1 itemprop="name">Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</h1>
             <span class="pub-authors" itemprop="author">
                 
-                Guandao Yang*, <b>Xun Huang*</b>, Zekun Hao, Ming-Yu Liu, Serge Belongie, Bharath Hariharan (*equal contribution)
+                <b>Xun Huang</b>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
                 
             </span>
             <span class="pull-right">
@@ -77,27 +77,27 @@
 <div class="share-box">
     <ul class="share">
         <li>
-            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpointflow%2f" target="_blank">
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fgan_survey%2f" target="_blank">
                 <i class="fa fa-facebook"></i>
             </a>
         </li>
         <li>
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=PointFlow%20%3a%203D%20Point%20Cloud%20Generation%20with%20Continuous%20Normalizing%20Flows&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpointflow%2f" target="_blank">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Generative%20Adversarial%20Networks%20for%20Image%20and%20Video%20Synthesis%3a%20Algorithms%20and%20Applications&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fgan_survey%2f" target="_blank">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         <li>
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpointflow%2f&amp;title=PointFlow%20%3a%203D%20Point%20Cloud%20Generation%20with%20Continuous%20Normalizing%20Flows" target="_blank">
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fgan_survey%2f&amp;title=Generative%20Adversarial%20Networks%20for%20Image%20and%20Video%20Synthesis%3a%20Algorithms%20and%20Applications" target="_blank">
                 <i class="fa fa-linkedin"></i>
             </a>
         </li>
         <li>
-            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpointflow%2f&amp;title=PointFlow%20%3a%203D%20Point%20Cloud%20Generation%20with%20Continuous%20Normalizing%20Flows" target="_blank">
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fgan_survey%2f&amp;title=Generative%20Adversarial%20Networks%20for%20Image%20and%20Video%20Synthesis%3a%20Algorithms%20and%20Applications" target="_blank">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li>
-            <a class="email" href="mailto:?subject=PointFlow%20%3a%203D%20Point%20Cloud%20Generation%20with%20Continuous%20Normalizing%20Flows&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpointflow%2f">
+            <a class="email" href="mailto:?subject=Generative%20Adversarial%20Networks%20for%20Image%20and%20Video%20Synthesis%3a%20Algorithms%20and%20Applications&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fgan_survey%2f">
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
@@ -109,18 +109,18 @@
         </div>
 
         
-        <img src="https://www.xunhuang.me/img/pointflow.gif" class="pub-banner" itemprop="image">
+        <img src="https://www.xunhuang.me/img/gan_survey.jpg" class="pub-banner" itemprop="image">
         
 
         <h3>Abstract</h3>
-        <p class="pub-abstract" itemprop="text">As 3D point clouds become the representation of choice for multiple vision and graphics applications, the ability to synthesize or reconstruct high-resolution, high-fidelity point clouds becomes crucial. Despite the recent success of deep learning models in discriminative tasks of point clouds, generating point clouds remains challenging. This paper proposes a principled probabilistic framework to generate 3D point clouds by modeling them as a distribution of distributions. Specifically, we learn a two-level hierarchy of distributions where the first level is the distribution of shapes and the second level is the distribution of points given a shape. This formulation allows us to both sample shapes and sample an arbitrary number of points from a shape. Our generative model, named PointFlow, learns each level of the distribution with a continuous normalizing flow. The invertibility of normalizing flows enables computation of the likelihood during training and allows us to train our model in the variational inference framework. Empirically, we demonstrate that PointFlow achieves state-of-the-art performance in point cloud generation. We additionally show our model is able to faithfully reconstruct point clouds and learn useful representations in an unsupervised manner.</p>
+        <p class="pub-abstract" itemprop="text">The generative adversarial network (GAN) framework has emerged as a powerful tool for various image and video synthesis tasks, allowing the synthesis of visual content in an unconditional or input-conditional manner. It has enabled the generation of high-resolution photorealistic images and videos, a task that was challenging or impossible with prior methods. It has also led to the creation of many new applications in content creation. In this paper, we provide an overview of GANs with a special focus on algorithms and applications for visual synthesis. We cover several important techniques to stabilize GAN training, which has a reputation for being notoriously difficult. We also discuss its applications to image translation, image processing, video synthesis, and neural rendering.</p>
 
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-                    <div class="col-xs-12 col-sm-9">ICCV 2019 <b>(Oral)</b></div>
+                    <div class="col-xs-12 col-sm-9">Proceedings of the IEEE 2021</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -132,7 +132,7 @@
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
-                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">July, 2019</div>
+                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">August, 2020</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -151,21 +151,17 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/1906.12320.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline" href="https://github.com/stevenygd/PointFlow">Code</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2112.05130.pdf">PDF</a>
 
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/1906.12320">Arxiv</a>
 
-<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/pointflow_bib.txt">BibTex</a>
 
-<a class="btn btn-primary btn-outline" href="https://www.youtube.com/watch?v=jqBiv77xC0M">Video</a>
 
-<a class="btn btn-primary btn-outline" href="https://www.guandaoyang.com/PointFlow/">Website</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/2112.05130">Arxiv</a>
+
+<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/gan_survey.txt">BibTex</a>
 
 
 
@@ -185,11 +181,11 @@
     <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://www.xunhuang.me/publication/funit/"><span aria-hidden="true">&larr;</span> Few-shot Unsupervised Image-to-Image Translation</a></li>
+        <li class="previous"><a href="https://www.xunhuang.me/publication/pointflow/"><span aria-hidden="true">&larr;</span> PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows</a></li>
         
 
         
-        <li class="next"><a href="https://www.xunhuang.me/publication/gan_survey/">Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://www.xunhuang.me/publication/poegan/">Multimodal Conditional Image Synthesis with Product-of-Experts GANs <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
