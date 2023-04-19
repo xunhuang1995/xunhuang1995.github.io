@@ -20,9 +20,9 @@
 
 
     <link rel="shortcut icon" href="https://www.xunhuang.me/img/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://www.xunhuang.me/publication/poegan/">
+    <link rel="canonical" href="https://www.xunhuang.me/publication/diffcollage/">
 
-    <title>Multimodal Conditional Image Synthesis with Product-of-Experts GANs | Xun Huang</title>
+    <title>DiffCollage: Parallel Generation of Large Content with Diffusion Models | Xun Huang</title>
 
 </head>
 <body id="top">
@@ -66,10 +66,10 @@
 
     <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
         <div class="pub-title">
-            <h1 itemprop="name">Multimodal Conditional Image Synthesis with Product-of-Experts GANs</h1>
+            <h1 itemprop="name">DiffCollage: Parallel Generation of Large Content with Diffusion Models</h1>
             <span class="pub-authors" itemprop="author">
                 
-                <b>Xun Huang</b>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
+                Qinsheng Zhang, Jiaming Song, <b>Xun Huang</b>, Yongxin Chen, Ming-Yu Liu
                 
             </span>
             <span class="pull-right">
@@ -77,27 +77,27 @@
 <div class="share-box">
     <ul class="share">
         <li>
-            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f" target="_blank">
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fdiffcollage%2f" target="_blank">
                 <i class="fa fa-facebook"></i>
             </a>
         </li>
         <li>
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f" target="_blank">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=DiffCollage%3a%20Parallel%20Generation%20of%20Large%20Content%20with%20Diffusion%20Models&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fdiffcollage%2f" target="_blank">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         <li>
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f&amp;title=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs" target="_blank">
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fdiffcollage%2f&amp;title=DiffCollage%3a%20Parallel%20Generation%20of%20Large%20Content%20with%20Diffusion%20Models" target="_blank">
                 <i class="fa fa-linkedin"></i>
             </a>
         </li>
         <li>
-            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f&amp;title=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs" target="_blank">
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fdiffcollage%2f&amp;title=DiffCollage%3a%20Parallel%20Generation%20of%20Large%20Content%20with%20Diffusion%20Models" target="_blank">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li>
-            <a class="email" href="mailto:?subject=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f">
+            <a class="email" href="mailto:?subject=DiffCollage%3a%20Parallel%20Generation%20of%20Large%20Content%20with%20Diffusion%20Models&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fdiffcollage%2f">
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
@@ -109,18 +109,18 @@
         </div>
 
         
-        <img src="https://www.xunhuang.me/img/poegan.jpg" class="pub-banner" itemprop="image">
+        <img src="https://www.xunhuang.me/img/diffcollage.jpg" class="pub-banner" itemprop="image">
         
 
         <h3>Abstract</h3>
-        <p class="pub-abstract" itemprop="text">Existing conditional image synthesis frameworks generate images based on user inputs in a single modality, such as text, segmentation, sketch, or style reference. They are often unable to leverage multimodal user inputs when available, which reduces their practicality. To address this limitation, we propose the Product-of-Experts Generative Adversarial Networks (PoE-GAN) framework, which can synthesize images conditioned on multiple input modalities or any subset of them, even the empty set. PoE-GAN consists of a product-of-experts generator and a multimodal multiscale projection discriminator. Through our carefully designed training scheme, PoE-GAN learns to synthesize images with high quality and diversity. Besides advancing the state of the art in multimodal conditional image synthesis, PoE-GAN also outperforms the best existing unimodal conditional image synthesis approaches when tested in the unimodal setting</p>
+        <p class="pub-abstract" itemprop="text">We present DiffCollage, a compositional diffusion model that can generate large content by leveraging diffusion models trained on generating pieces of the large content. Our approach is based on a factor graph representation where each factor node represents a portion of the content and a variable node represents their overlap. This representation allows us to aggregate intermediate outputs from diffusion models defined on individual nodes to generate content of arbitrary size and shape in parallel without resorting to an autoregressive generation procedure. We apply DiffCollage to various tasks, including infinite image generation, panorama image generation, and long-duration text-guided motion generation. Extensive experimental results with a comparison to strong autoregressive baselines verify the effectiveness of our approach.</p>
 
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-                    <div class="col-xs-12 col-sm-9">ECCV 2022</div>
+                    <div class="col-xs-12 col-sm-9">CVPR 2023</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -132,7 +132,7 @@
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
-                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">December, 2021</div>
+                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">March, 2023</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -151,7 +151,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2112.05130.pdf">PDF</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2303.17076.pdf">PDF</a>
 
 
 
@@ -159,11 +159,11 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/2112.05130">Arxiv</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/2303.17076">Arxiv</a>
 
-<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/poegan_bib.txt">BibTex</a>
+<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/diffcollage_bib.txt">BibTex</a>
 
-<a class="btn btn-primary btn-outline" href="https://deepimagination.cc/PoE-GAN/">Website</a>
+<a class="btn btn-primary btn-outline" href="https://research.nvidia.com/labs/dir/diffcollage">Website</a>
 
 
 
@@ -183,11 +183,9 @@
     <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://www.xunhuang.me/publication/gan_survey/"><span aria-hidden="true">&larr;</span> Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</a></li>
+        <li class="previous"><a href="https://www.xunhuang.me/publication/magic3d/"><span aria-hidden="true">&larr;</span> Magic3D: High-Resolution Text-to-3D Content Creation</a></li>
         
 
-        
-        <li class="next"><a href="https://www.xunhuang.me/publication/ediffi/">eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>

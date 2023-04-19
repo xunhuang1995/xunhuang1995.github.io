@@ -20,9 +20,9 @@
 
 
     <link rel="shortcut icon" href="https://www.xunhuang.me/img/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://www.xunhuang.me/publication/poegan/">
+    <link rel="canonical" href="https://www.xunhuang.me/publication/magic3d/">
 
-    <title>Multimodal Conditional Image Synthesis with Product-of-Experts GANs | Xun Huang</title>
+    <title>Magic3D: High-Resolution Text-to-3D Content Creation | Xun Huang</title>
 
 </head>
 <body id="top">
@@ -66,10 +66,10 @@
 
     <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
         <div class="pub-title">
-            <h1 itemprop="name">Multimodal Conditional Image Synthesis with Product-of-Experts GANs</h1>
+            <h1 itemprop="name">Magic3D: High-Resolution Text-to-3D Content Creation</h1>
             <span class="pub-authors" itemprop="author">
                 
-                <b>Xun Huang</b>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
+                Chen-Hsuan Lin, Jun Gao, Luming Tang, Towaki Takikawa, Xiaohui Zeng, <b>Xun Huang</b>, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin
                 
             </span>
             <span class="pull-right">
@@ -77,27 +77,27 @@
 <div class="share-box">
     <ul class="share">
         <li>
-            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f" target="_blank">
+            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fmagic3d%2f" target="_blank">
                 <i class="fa fa-facebook"></i>
             </a>
         </li>
         <li>
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f" target="_blank">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Magic3D%3a%20High-Resolution%20Text-to-3D%20Content%20Creation&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fmagic3d%2f" target="_blank">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         <li>
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f&amp;title=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs" target="_blank">
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fmagic3d%2f&amp;title=Magic3D%3a%20High-Resolution%20Text-to-3D%20Content%20Creation" target="_blank">
                 <i class="fa fa-linkedin"></i>
             </a>
         </li>
         <li>
-            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f&amp;title=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs" target="_blank">
+            <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fmagic3d%2f&amp;title=Magic3D%3a%20High-Resolution%20Text-to-3D%20Content%20Creation" target="_blank">
                 <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li>
-            <a class="email" href="mailto:?subject=Multimodal%20Conditional%20Image%20Synthesis%20with%20Product-of-Experts%20GANs&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fpoegan%2f">
+            <a class="email" href="mailto:?subject=Magic3D%3a%20High-Resolution%20Text-to-3D%20Content%20Creation&amp;body=https%3a%2f%2fwww.xunhuang.me%2fpublication%2fmagic3d%2f">
                 <i class="fa fa-envelope"></i>
             </a>
         </li>
@@ -109,18 +109,18 @@
         </div>
 
         
-        <img src="https://www.xunhuang.me/img/poegan.jpg" class="pub-banner" itemprop="image">
+        <img src="https://www.xunhuang.me/img/magic3d.jpg" class="pub-banner" itemprop="image">
         
 
         <h3>Abstract</h3>
-        <p class="pub-abstract" itemprop="text">Existing conditional image synthesis frameworks generate images based on user inputs in a single modality, such as text, segmentation, sketch, or style reference. They are often unable to leverage multimodal user inputs when available, which reduces their practicality. To address this limitation, we propose the Product-of-Experts Generative Adversarial Networks (PoE-GAN) framework, which can synthesize images conditioned on multiple input modalities or any subset of them, even the empty set. PoE-GAN consists of a product-of-experts generator and a multimodal multiscale projection discriminator. Through our carefully designed training scheme, PoE-GAN learns to synthesize images with high quality and diversity. Besides advancing the state of the art in multimodal conditional image synthesis, PoE-GAN also outperforms the best existing unimodal conditional image synthesis approaches when tested in the unimodal setting</p>
+        <p class="pub-abstract" itemprop="text">DreamFusion has recently demonstrated the utility of a pre-trained text-to-image diffusion model to optimize Neural Radiance Fields (NeRF), achieving remarkable text-to-3D synthesis results. However, the method has two inherent limitations: (a) extremely slow optimization of NeRF and (b) low-resolution image space supervision on NeRF, leading to low-quality 3D models with a long processing time. In this paper, we address these limitations by utilizing a two-stage optimization framework. First, we obtain a coarse model using a low-resolution diffusion prior and accelerate with a sparse 3D hash grid structure. Using the coarse representation as the initialization, we further optimize a textured 3D mesh model with an efficient differentiable renderer interacting with a high-resolution latent diffusion model. Our method, dubbed Magic3D, can create high quality 3D mesh models in 40 minutes, which is 2× faster than DreamFusion (reportedly taking 1.5 hours on average), while also achieving higher resolution. User studies show 61.7% raters to prefer our approach over DreamFusion. Together with the image-conditioned generation capabilities, we provide users with new ways to control 3D synthesis, opening up new avenues to various creative applications.</p>
 
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-                    <div class="col-xs-12 col-sm-9">ECCV 2022</div>
+                    <div class="col-xs-12 col-sm-9">CVPR 2023</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -132,7 +132,7 @@
             <div class="col-sm-10">
                 <div class="row">
                     <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
-                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">December, 2021</div>
+                    <div class="col-xs-12 col-sm-9" itemprop="datePublished">March, 2023</div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -151,7 +151,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2112.05130.pdf">PDF</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/pdf/2211.10440.pdf">PDF</a>
 
 
 
@@ -159,11 +159,11 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/2112.05130">Arxiv</a>
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/2211.10440">Arxiv</a>
 
-<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/poegan_bib.txt">BibTex</a>
+<a class="btn btn-primary btn-outline" href="https://www.xunhuang.me/publications/magic3d_bib.txt">BibTex</a>
 
-<a class="btn btn-primary btn-outline" href="https://deepimagination.cc/PoE-GAN/">Website</a>
+<a class="btn btn-primary btn-outline" href="https://research.nvidia.com/labs/dir/magic3d">Website</a>
 
 
 
@@ -183,11 +183,11 @@
     <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://www.xunhuang.me/publication/gan_survey/"><span aria-hidden="true">&larr;</span> Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</a></li>
+        <li class="previous"><a href="https://www.xunhuang.me/publication/ediffi/"><span aria-hidden="true">&larr;</span> eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers</a></li>
         
 
         
-        <li class="next"><a href="https://www.xunhuang.me/publication/ediffi/">eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://www.xunhuang.me/publication/diffcollage/">DiffCollage: Parallel Generation of Large Content with Diffusion Models <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>

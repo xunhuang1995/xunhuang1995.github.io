@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Xun Huang</copyright>
-    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Mar 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.xunhuang.me/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DiffCollage: Parallel Generation of Large Content with Diffusion Models</title>
+      <link>https://www.xunhuang.me/publication/diffcollage/</link>
+      <pubDate>Thu, 30 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/diffcollage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magic3D: High-Resolution Text-to-3D Content Creation</title>
+      <link>https://www.xunhuang.me/publication/magic3d/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/magic3d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers</title>
+      <link>https://www.xunhuang.me/publication/ediffi/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xunhuang.me/publication/ediffi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Multimodal Conditional Image Synthesis with Product-of-Experts GANs</title>
