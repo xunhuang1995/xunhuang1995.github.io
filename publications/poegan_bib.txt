@@ -1,6 +1,0 @@
-@inproceedings{huang2022poegan,
-    title={Multimodal Conditional Image Synthesis with Product-of-Experts {GANs}},
-    author={Xun Huang and Arun Mallya and Ting-Chun Wang and Ming-Yu Liu},
-    booktitle={ECCV},
-    year={2022}
-}

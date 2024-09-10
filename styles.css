@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body and layout styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container for the profile section */
+#profile .container {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Left profile section: for the profile image */
+.profile-left {
+    flex: 1;
+}
+
+.profile-photo {
+    width: 250px; /* Adjust the size here */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add a subtle border-radius */
+    min-width: 200px; /* Make sure the image doesn’t shrink below this size */
+}
+
+/* Right profile section: for the text */
+.profile-right {
+    flex: 2;
+    padding-left: 30px; /* Space between the photo and text */
+}
+
+.profile-right h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.profile-right p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.profile-right strong {
+    color: #000;
+}
+
+.profile-right a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-right a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    background-color: #fff; /* White background for the header */
+    border-bottom: 1px solid #e0e0e0; /* Bottom border for separation */
+    padding: 10px 0; /* Padding inside the header */
+}
+
+/* Flexbox container for header */
+.container-header {
+    width: 80%;
+    margin: 0 auto; /* Centers the content horizontally */
+    display: flex;
+    justify-content: space-between; /* Pushes the title left, nav right */
+    align-items: center; /* Vertically centers the content */
+}
+
+.container-large {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: 10px;
+    font-size: large
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+/* Title (left side) */
+h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #333; /* Darker color for the title */
+}
+
+
+/* Bio Section */
+.bio-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+/* Styling for profile photo */
+.profile-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Bio details styling */
+.bio-details {
+    flex: 1;
+}
+
+/* Research Interests Section */
+#research {
+    margin-top: 10px;
+}
+
+#research h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#research ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#research ul li {
+    margin-top: 10px;
+}
+
+/* Publications Section */
+#publications {
+    margin-top: 10px;
+}
+
+.publication {
+    display: flex; /* Flexbox layout to align image and text */
+    align-items: center; /* Align items (image and text) vertically in the middle */
+    margin-bottom: 20px; /* Space between publications */
+}
+
+/* Image styling */
+.publication img {
+    width: 200px; /* Set the desired width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between the image and the text */
+}
+
+/* Publication Details */
+.publication-details {
+    flex: 1;
+}
+
+.publication-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.publication-details p {
+    margin: 5px 0;
+}
+
+.publication-details a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.publication-details a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+#collaborators ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#collaborators ul li {
+    margin-top: 10px;
+}
+
+/* Collaborators Section */
+#collaborators h2 {
+    margin-bottom: 10px;
+}
+
+#collaborators {
+    margin-top: 10px;
+}
+
+.collaborators {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#teaching ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#teaching ul li {
+    margin-top: 10px;
+}
+
+/* Collaborators Section */
+#teaching h2 {
+    margin-bottom: 10px;
+}
+
+#teaching {
+    margin-top: 10px;
+}
+
+.teaching {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}

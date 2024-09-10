@@ -1,6 +1,0 @@
-@inproceedings{liu2020generative,
-  title={Generative adversarial networks for image and video synthesis: Algorithms and applications},
-  author={Liu, Ming-Yu and Huang, Xun and Yu, Jiahui and Wang, Ting-Chun and Mallya, Arun},
-  journal={Proceedings of the IEEE},
-  year={2021}
-}

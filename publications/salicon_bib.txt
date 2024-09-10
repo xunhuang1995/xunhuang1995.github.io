@@ -1,6 +1,0 @@
-@inproceedings{huang2015salicon,
-  title={Salicon: Reducing the semantic gap in saliency prediction by adapting deep neural networks},
-  author={Huang, Xun and Shen, Chengyao and Boix, Xavier and Zhao, Qi},
-  booktitle={ICCV},
-  year={2015}
-}

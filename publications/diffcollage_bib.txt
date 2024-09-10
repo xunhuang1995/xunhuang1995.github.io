@@ -1,6 +1,0 @@
-@inproceedings{zhange2023diffcollage,
-    title={DiffCollage: Parallel Generation of Large Content with Diffusion Models},
-    author={Qinsheng Zhang and Jiaming Song and Xun Huang and Yongxin Chen and Ming-yu Liu},
-    booktitle={CVPR},
-    year={2023}
-}

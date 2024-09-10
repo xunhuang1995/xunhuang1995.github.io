@@ -1,6 +1,0 @@
-@article{balaji2022eDiff-I,
-    title={eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers},
-    author={Yogesh Balaji and Seungjun Nah and Xun Huang and Arash Vahdat and Jiaming Song and Qinsheng Zhang and Karsten Kreis and Miika Aittala and Timo Aila and Samuli Laine and Bryan Catanzaro and Tero Karras and Ming-Yu Liu},
-    journal={arXiv preprint arXiv:2211.01324},
-    year={2022}
-}

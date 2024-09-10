@@ -1,1098 +1,262 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme" content="hugo-academic">
-    <meta name="generator" content="Hugo 0.55.3" />
-    <meta name="author" content="Xun Huang">
-    <meta name="description" content="Senior Research Scientist">
-
-    <link rel="stylesheet" href="https://www.xunhuang.me/css/highlight.min.css">
-    <link rel="stylesheet" href="https://www.xunhuang.me/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.xunhuang.me/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.xunhuang.me/css/academicons.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-    <link rel="stylesheet" href="https://www.xunhuang.me/css/hugo-academic.css">
-    
-
-
-    <link rel="shortcut icon" href="https://www.xunhuang.me/img/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://www.xunhuang.me/">
-
-    <title>Xun Huang</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xun Huang's Academic Homepage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
-
-
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
-    <div class="container">
-
-        
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://www.xunhuang.me/">Xun Huang</a>
+<body>
+    <!-- Header Section -->
+    <!-- <header>
+        <div class="container-header">
+            <h1>Xun Huang</h1>
         </div>
+    </header> -->
 
-        
-        <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+    <section id="profile">
+        <div class="container">
+            <div class="profile-left">
+                <img src="imgs/profile-photo.jpg" alt="Xun Huang Profile Photo" class="profile-photo">
+            </div>
+            <div class="profile-right">
+                <h1>Xun Huang</h1>
+                <p>Senior Research Scientist<br>
+                   Adobe Research<br>
+                   Pittsburgh, PA</p>
+                <p><strong>Email:</strong> xuhuang at adobe dot com</p>
 
-            
-            <ul class="nav navbar-nav navbar-right">
-                
-                <li class="nav-item"><a href="https://www.xunhuang.me/#top">Home</a></li>
-                
-                <li class="nav-item"><a href="https://www.xunhuang.me/#publications">Publications</a></li>
-                
-                <li class="nav-item"><a href="https://www.xunhuang.me/#teaching">Teaching</a></li>
-                
-                <li class="nav-item"><a href="https://www.xunhuang.me/#services">Services</a></li>
-                
+                <p>
+                    <a href="https://scholar.google.com/citations?user=1XGC4GsAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+                    <a href="https://github.com/xunhuang1995">GitHub</a> |
+                    <a href="#publications">Papers</a> |
+                    <a href="#collaborators">Collaborators</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio">
+        <div class="container-large">
+            <p>
+                My name is Xun Huang (pronounced as /shuun hwang/). I am a Senior Research Scientist at Adobe, working on multimodal Generative AI. Prior to joining Adobe, I was a researcher at NVIDIA working on the <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">Picasso and Edify</a>. I obtained my PhD from the Department of Computer Science at Cornell University, advised by <a href="https://www.belongielab.org/">Professor Serge Belongie</a>. During PhD, my research was supported by Adobe Research Fellowship (2019), Snap Research Fellowship (2019), and NVIDIA Graduate Fellowship (2018).
+            </p>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <div class="container-large">
+            <p>My research interests include:</p>
+            <ul>
+                <li>Next-generation Architectures for Multimodal GenAI</li>
+                <li>Compositionality and Generalization of Generative Models</li>
+                <li>Controllable Generation</li>
             </ul>
-
         </div>
-    </div>
-</nav>
+    </section>
 
-
-
-<span id="homepage" style="display: none"></span>
-
-
-
-
-
-
-
-
-<section id="bio" class="home-section">
-    <div class="container">
-        <div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <div class="col-xs-12 col-md-4">
-        <div id="profile">
-            <div class="portrait" itemprop="image" style="background-image: url('https://www.xunhuang.me/img/portrait2.jpg');"></div>
-            <div class="portrait-title">
-                <h2 itemprop="name">Xun Huang</h2>
-                <h3 itemprop="jobTitle">Senior Research Scientist</h3>
-                <h3 itemprop="worksFor">Adobe</h3>
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2>Publications</h2>
+            <div class="publication">
+                <img src="imgs/jedi.jpeg" alt="Paper 1" class="publication-image">
+                <div class="publication-details">
+                    <h3>JeDi: Joint-Image Diffusion Models for Finetuning-Free Personalized Text-to-Image Generation</h3>
+                    <p><em>CVPR, 2024</em></p>
+                    <p>Yu Zeng, Vishal M Patel, Haochen Wang, Xun Huang, Ting-Chun Wang, Ming-Yu Liu, Yogesh Balaji</p>
+                    <a href="https://arxiv.org/abs/2407.06187">[arXiv]</a>
+                    <a href="https://research.nvidia.com/labs/dir/jedi/">[Project]</a>
+                </div>
             </div>
 
-            <ul class="social-icon">
-                
-                <li>
-                    <a href="mailto:xuhuang@adobe.com">
-                    
-                        <i class="fa fa-envelope big-icon" aria-hidden="true"></i>
-                    
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://scholar.google.com/citations?user=1XGC4GsAAAAJ&amp;hl=en&amp;authuser=1">
-                    
-                        <i class="ai ai-google-scholar big-icon" aria-hidden="true"></i>
-                    
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="//www.linkedin.com/in/xunhuang1995">
-                    
-                        <i class="fa fa-linkedin big-icon" aria-hidden="true"></i>
-                    
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="//www.facebook.com/xunhuang1995">
-                    
-                        <i class="fa fa-facebook big-icon" aria-hidden="true"></i>
-                    
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="//github.com/xunhuang1995">
-                    
-                        <i class="fa fa-github big-icon" aria-hidden="true"></i>
-                    
-                    </a>
-                </li>
-                
+            <div class="publication">
+                <img src="imgs/diffcollage.jpg" alt="Paper 2" class="publication-image">
+                <div class="publication-details">
+                    <h3>DiffCollage: Parallel Generation of Large Content with Diffusion Models</h3>
+                    <p><em>CVPR, 2023</em></p>
+                    <p>Qinsheng Zhang, Jiaming Song, Xun Huang, Yongxin Chen, Ming-Yu Liu</p>
+                    <a href="https://arxiv.org/abs/2303.17076">[arXiv]</a>
+                    <a href="https://research.nvidia.com/labs/dir/diffcollage/">[Project]</a>
+                </div>
+            </div>
+
+        <div class="publication">
+            <img src="imgs//magic3d.jpg" alt="Magic3D" class="publication-image">
+            <div class="publication-details">
+                <h3>Magic3D: High-Resolution Text-to-3D Content Creation</h3>
+                <p><em>CVPR 2023</em></p>
+                <p>Chen-Hsuan Lin, Jun Gao, Luming Tang, Towaki Takikawa, Xiaohui Zeng, Xun Huang, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin</p>
+                <a href="https://arxiv.org/abs/2211.10440">[arXiv]</a>
+                <a href="https://research.nvidia.com/labs/dir/magic3d">[Project]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//ediffi.jpg" alt="eDiff-I" class="publication-image">
+            <div class="publication-details">
+                <h3>eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers</h3>
+                <p><em>arXiv 2022</em></p>
+                <p>Yogesh Balaji, Seungjun Nah, Xun Huang, Arash Vahdat, Jiaming Song, Qinsheng Zhang, Karsten Kreis, Miika Aittala, Timo Aila, Samuli Laine, Bryan Catanzaro, Tero Karras, Ming-Yu Liu</p>
+                <a href="https://arxiv.org/abs/2211.01324">[arXiv]</a>
+                <a href="https://research.nvidia.com/labs/dir/eDiff-I">[Project]</a>
+                <a href="https://www.youtube.com/watch?v=WbaVvlgxbl4">[Video]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//poegan_full.jpg" alt="PoE-GANs" class="publication-image">
+            <div class="publication-details">
+                <h3>Multimodal Conditional Image Synthesis with Product-of-Experts GANs</h3>
+                <p><em>ECCV 2022</em></p>
+                <p>Xun Huang, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu</p>
+                <a href="https://arxiv.org/abs/2112.05130">[arXiv]</a>
+                <a href="https://research.nvidia.com/labs/dir/PoE-GAN/">[Project]</a>
+                <a href="https://www.youtube.com/watch?app=desktop&v=56aA_FaeAPY">[Video]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//gan_survey.jpg" alt="GAN Survey" class="publication-image">
+            <div class="publication-details">
+                <h3>Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</h3>
+                <p><em>Proceedings of the IEEE 2021</em></p>
+                <p>Xun Huang, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu</p>
+                <a href="https://arxiv.org/abs/2008.02793">[arXiv]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//pointflow.gif" alt="PointFlow" class="publication-image">
+            <div class="publication-details">
+                <h3>PointFlow: 3D Point Cloud Generation with Continuous Normalizing Flows</h3>
+                <p><em>ICCV 2019 (Oral)</em></p>
+                <p>Guandao Yang*, Xun Huang*, Zekun Hao, Ming-Yu Liu, Serge Belongie, Bharath Hariharan (*equal contribution)</p>
+                <a href="https://arxiv.org/abs/1906.12320">[arXiv]</a>
+                <a href="https://github.com/stevenygd/PointFlow">[Code]</a>
+                <a href="https://www.youtube.com/watch?v=jqBiv77xC0M">[Video]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//funit.gif" alt="FUNIT" class="publication-image">
+            <div class="publication-details">
+                <h3>Few-shot Unsupervised Image-to-Image Translation</h3>
+                <p><em>ICCV 2019</em></p>
+                <p>Ming-Yu Liu, Xun Huang, Arun Mallya, Tero Karras, Timo Aila, Jaakko Lehtinen, Jan Kautz</p>
+                <a href="https://arxiv.org/abs/1905.01723">[arXiv]</a>
+                <a href="https://github.com/NVlabs/FUNIT/">[Code]</a>
+                <a href="https://www.youtube.com/watch?v=kgPAqsC8PLM">[Video]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//munit.jpg" alt="MUNIT" class="publication-image">
+            <div class="publication-details">
+                <h3>Multimodal Unsupervised Image-to-Image Translation</h3>
+                <p><em>ECCV 2018</em></p>
+                <p>Xun Huang, Ming-Yu Liu, Serge Belongie, Jan Kautz</p>
+                <a href="https://arxiv.org/abs/1804.04732">[arXiv]</a>
+                <a href="https://github.com/NVlabs/MUNIT">[Code]</a>
+                <a href="https://youtu.be/ab64TWzWn40?si=w6sb-t2krah7Dtj-">[Video]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//captioning.jpg" alt="Image Captioning" class="publication-image">
+            <div class="publication-details">
+                <h3>Learning to Evaluate Image Captioning</h3>
+                <p><em>CVPR 2018</em></p>
+                <p>Yin Cui, Guandao Yang, Andreas Veit, Xun Huang, Serge Belongie</p>
+                <a href="https://arxiv.org/abs/1806.06422">[arXiv]</a>
+                <a href="https://github.com/richardaecn/cvpr18-caption-eval">[Code]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//videogen.jpg" alt="Controllable Video Generation" class="publication-image">
+            <div class="publication-details">
+                <h3>Controllable Video Generation with Sparse Trajectories</h3>
+                <p><em>CVPR 2018</em></p>
+                <p>Zekun Hao, Xun Huang, Serge Belongie</p>
+                <a href="https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1575.pdf">[PDF]</a>
+                <a href="https://github.com/zekunhao1995/ControllableVideoGen">[Code]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//adain.jpg" alt="AdaIN" class="publication-image">
+            <div class="publication-details">
+                <h3>Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization</h3>
+                <p><em>ICCV 2017 (Oral)</em></p>
+                <p>Xun Huang, Serge Belongie</p>
+                <a href="https://arxiv.org/abs/1703.06868">[arXiv]</a>
+                <a href="https://github.com/xunhuang1995/AdaIN-style">[Code]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//sgan_cifar.png" alt="SGAN" class="publication-image">
+            <div class="publication-details">
+                <h3>Stacked Generative Adversarial Networks</h3>
+                <p><em>CVPR 2017</em></p>
+                <p>Xun Huang, Yixuan Li, Omid Poursaeed, John Hopcroft, Serge Belongie</p>
+                <a href="https://arxiv.org/abs/1612.04357">[arXiv]</a>
+                <a href="https://github.com/xunhuang1995/SGAN">[Code]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//convpp.png" alt="Convolutional Pseudoprior" class="publication-image">
+            <div class="publication-details">
+                <h3>Top-Down Learning for Structured Labeling with Convolutional Pseudoprior</h3>
+                <p><em>ECCV 2016</em></p>
+                <p>Saining Xie*, Xun Huang*, Zhuowen Tu (*equal contribution)</p>
+                <a href="http://arxiv.org/abs/1511.07409">[arXiv]</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <img src="imgs//salicon.jpg" alt="SALICON" class="publication-image">
+            <div class="publication-details">
+                <h3>SALICON: Reducing the Semantic Gap in Saliency Prediction by Adapting Deep Neural Networks</h3>
+                <p><em>ICCV 2015</em></p>
+                <p>Xun Huang, Chengyao Shen, Xavier Boix, Qi Zhao</p>
+                <a href="https://openaccess.thecvf.com/content_iccv_2015/papers/Huang_SALICON_Reducing_the_ICCV_2015_paper.pdf">[PDF]</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Collaborators Section -->
+    <section id="collaborators">
+        <div class="container">
+            <h2>Student mentees/interns</h2>
+            <p>I have been fortunate to work with many talented students and interns:</p>
+            <ul>
+                <li><a href="https://ryanpo.com/">Ryan Po</a>, Stanford</li>
+                <li><a href="https://tianweiy.github.io/">Tianwei Yin</a>, MIT</li>
+                <li><a href="https://zengyu.me/">Yu Zeng</a>, JHU</li>
+                <li><a href="https://qsh-zh.github.io/">Qinsheng Zhang</a>, Georgia Tech</li>
+                <li><a href="https://zinanlin.me/">Zinan Lin</a>, CMU</li>
+                <li><a href="https://www.guandaoyang.com/">Guandao Yang</a>, Cornell (during undergrad)</li>
+                <li><a href="https://zekunhao.com/">Zekun Hao</a>, Beihang (during undergrad)</li>
             </ul>
-
         </div>
-    </div>
+    </section>
 
-    <div class="visible-sm visible-xs"></div>
-
-    <div class="col-xs-12 col-md-8" itemprop="description">
-
-        
-
-<h1 id="about">About</h1>
-
-<p>Welcome to my homepage! My name is Xun Huang (黄勋 in Chinese, pronounced as /shuun hwang/). I am a Senior research scientist at Adobe, working on multimodal Generative AI. Previously I was a researcher at NVIDIA. I obtained my PhD from the <a href="http://www.cs.cornell.edu/">Department of Computer Science</a> at <a href="http://www.cornell.edu/">Cornell University</a>, affiliated with <a href="https://tech.cornell.edu/">Cornell Tech</a> at NYC. I was advised by Professor <a href="http://blogs.cornell.edu/techfaculty/serge-belongie/">Serge Belongie</a>. My research focuses on deep generative models and applying them to re-create the visual world.</p>
-
-<p>During PhD, my research was supported by <a href="https://research.adobe.com/fellowship/previous-fellowship-award-winners/">Adobe Research Fellowship (2019)</a>, <a href="https://snapresearchfs.splashthat.com/">Snap Research Fellowship (2019)</a>, and <a href="https://www.nvidia.com/en-us/research/graduate-fellowships/">NVIDIA Graduate Fellowship (2018)</a>.</p>
-
-
-        <div class="row">
-
-            
-
-            
-
+    <!-- Research Section -->
+    <section id="teaching">
+        <div class="container">
+            <h2>Teaching</h2>
+            <ul>
+                <li><a href="https://cornelltech.github.io/cs5785-fall-2019/index.html">Applied Machine Learning (CS 5785)</a>, Cornell Tech, 2017 Fall and 2019 Fall</li>
+                <li><a href="https://www.cs.cornell.edu/courses/cs4320/2016fa/">Introduction to Database Systems (CS 4320)</a>, Cornell, Fall 2016</li>
+            </ul>
         </div>
-
-</div>
-
-    </div>
-</section>
-
-
-
-
-
-
-
-<section id="publications" class="home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 section-heading"  align="center">
-                <h1>Publications</h1>
-                
-            </div>
-            <div class="col-xs-12 col-md-12">
-            <br /> 
-                
-                <ul class="fa-ul">
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/diffcollage/">
-                <img src="https://www.xunhuang.me/img/diffcollage.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/diffcollage/" itemprop="url">DiffCollage: Parallel Generation of Large Content with Diffusion Models</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Qinsheng Zhang, Jiaming Song, <b>Xun Huang</b>, Yongxin Chen, Ming-Yu Liu
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    CVPR 2023</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/diffcollage/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/2303.17076.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2303.17076">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/diffcollage_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://research.nvidia.com/labs/dir/diffcollage">Website</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/magic3d/">
-                <img src="https://www.xunhuang.me/img/magic3d.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/magic3d/" itemprop="url">Magic3D: High-Resolution Text-to-3D Content Creation</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Chen-Hsuan Lin, Jun Gao, Luming Tang, Towaki Takikawa, Xiaohui Zeng, <b>Xun Huang</b>, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    CVPR 2023</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/magic3d/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/2211.10440.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2211.10440">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/magic3d_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://research.nvidia.com/labs/dir/magic3d">Website</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/ediffi/">
-                <img src="https://www.xunhuang.me/img/ediffi.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/ediffi/" itemprop="url">eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Yogesh Balaji, Seungjun Nah, <b>Xun Huang</b>, Arash Vahdat, Jiaming Song, Qinsheng Zhang, Karsten Kreis, Miika Aittala, Timo Aila, Samuli Laine, Bryan Catanzaro, Tero Karras, Ming-Yu Liu
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    arXiv 2022</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/ediffi/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/2211.01324.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2211.01324">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/ediffi_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://research.nvidia.com/labs/dir/eDiff-I">Website</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/poegan/">
-                <img src="https://www.xunhuang.me/img/poegan_full.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/poegan/" itemprop="url">Multimodal Conditional Image Synthesis with Product-of-Experts GANs</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ECCV 2022</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/poegan/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/2112.05130.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2112.05130">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/poegan_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://deepimagination.cc/PoE-GAN/">Website</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/gan_survey/">
-                <img src="https://www.xunhuang.me/img/gan_survey.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/gan_survey/" itemprop="url">Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    Proceedings of the IEEE 2021</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/gan_survey/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/2112.05130.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/2112.05130">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/gan_survey.txt">BibTex</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/pointflow/">
-                <img src="https://www.xunhuang.me/img/pointflow.gif" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/pointflow/" itemprop="url">PointFlow : 3D Point Cloud Generation with Continuous Normalizing Flows</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Guandao Yang*, <b>Xun Huang*</b>, Zekun Hao, Ming-Yu Liu, Serge Belongie, Bharath Hariharan (*equal contribution)
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ICCV 2019 <b>(Oral)</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/pointflow/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1906.12320.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/stevenygd/PointFlow">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1906.12320">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/pointflow_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.youtube.com/watch?v=jqBiv77xC0M">Video</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.guandaoyang.com/PointFlow/">Website</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/funit/">
-                <img src="https://www.xunhuang.me/img/funit.gif" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/funit/" itemprop="url">Few-shot Unsupervised Image-to-Image Translation</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Ming-Yu Liu, <b>Xun Huang</b>, Arun Mallya, Tero Karras, Timo Aila, Jaakko Lehtinen, Jan Kautz
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ICCV 2019
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/funit/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1905.01723.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/NVlabs/FUNIT/">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1905.01723">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/funit_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.youtube.com/watch?v=kgPAqsC8PLM">Video</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://nvlabs.github.io/FUNIT/petswap.html">Demo</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/munit/">
-                <img src="https://www.xunhuang.me/img/munit.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/munit/" itemprop="url">Multimodal Unsupervised Image-to-Image Translation</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Ming-Yu Liu, Serge Belongie, Jan Kautz
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ECCV 2018
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/munit/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1804.04732.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/NVlabs/MUNIT">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1804.04732">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/munit_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.youtube.com/watch?v=ab64TWzWn40">Video</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/captioning/">
-                <img src="https://www.xunhuang.me/img/captioning.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/captioning/" itemprop="url">Learning to Evaluate Image Captioning</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Yin Cui, Guandao Yang, Andreas Veit, <b>Xun Huang</b>, Serge Belongie
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    CVPR 2018
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/captioning/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1501.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/richardaecn/cvpr18-caption-eval">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/captioning_bib.txt">BibTex</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/videogen/">
-                <img src="https://www.xunhuang.me/img/videogen.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/videogen/" itemprop="url">Controllable Video Generation with Sparse Trajectories</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Zekun  Hao, <b>Xun Huang</b>, Serge Belongie
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    CVPR 2018
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/videogen/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://vision.cornell.edu/se3/wp-content/uploads/2018/03/1575.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/zekunhao1995/ControllableVideoGen">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/videogen_bib.txt">BibTex</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/adain/">
-                <img src="https://www.xunhuang.me/img/adain.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/adain/" itemprop="url">Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Serge Belongie
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ICCV 2017 <b>(Oral)</b>
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/adain/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1703.06868.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/xunhuang1995/AdaIN-style">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1703.06868">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/adain_bib.txt">BibTex</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/sgan/">
-                <img src="https://www.xunhuang.me/img/sgan_cifar.png" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/sgan/" itemprop="url">Stacked Generative Adversarial Networks</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Yixuan Li, Omid Poursaeed, John Hopcroft, Serge Belongie
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    CVPR 2017
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/sgan/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1612.04357.pdf">PDF</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/xunhuang1995/SGAN">Code</a>
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1612.04357">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/sgan_bib.txt">BibTex</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/convpp/">
-                <img src="https://www.xunhuang.me/img/convpp.png" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/convpp/" itemprop="url">Top-Down Learning for Structured Labeling with Convolutional Pseudoprior</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                Saining Xie*, <b>Xun Huang*</b>, Zhuowen Tu (*equal contribution)
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ECCV 2016
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/convpp/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="http://arxiv.org/pdf/1511.07409v2.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="http://arxiv.org/abs/1511.07409">Arxiv</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/convpp_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/convpp_poster.pdf">Poster</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <div class="row">
-        
-        <div class="col-xs-12 col-md-3">
-            <a href="https://www.xunhuang.me/publication/salicon/">
-                <img src="https://www.xunhuang.me/img/salicon.jpg" class="pub-banner" itemprop="image" style="max-height: 130px">
-            </a>
-        </div>
-        <div class="col-xs-12 col-md-9">
-        
-
-            <h3 class="article-title" itemprop="name">
-                <a href="https://www.xunhuang.me/publication/salicon/" itemprop="url">SALICON: Reducing the Semantic Gap in Saliency Prediction by Adapting Deep Neural Networks</a>
-            </h3>
-
-            <div class="pub-authors" itemprop="author">
-                
-                <b>Xun Huang</b>, Chengyao Shen, Xavier Boix, Qi Zhao
-                
-            </div>
-
-            <div class="pub-publication">
-                
-                    ICCV 2015
-                
-            </div>
-
-            <div class="pub-links">
-                
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publication/salicon/">Details</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Huang_SALICON_Reducing_the_ICCV_2015_paper.pdf">PDF</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/salicon_bib.txt">BibTex</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://www.xunhuang.me/publications/salicon_poster.pdf">Poster</a>
-
-<a class="btn btn-primary btn-outline btn-xs" href="http://www.salicon.net/demo">Demo</a>
-
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-                    
-                </ul>
-                
-                <li>Also see my <a
- href="https://scholar.google.com/citations?user=1XGC4GsAAAAJ&hl=en&authuser=1">Google Scholar</a>.</li>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="services" class="home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 section-heading"  align="center">
-                <h1>Services</h1>
-                
-            </div>
-            <div class="col-xs-12 col-md-12">
-            <br /> 
-                <p>Journal reviewer: TPAMI, IJCV, ToG, TIP, TVCG, CVIU, TMM, TNNLS, &hellip;</p>
-
-<p>Conference reviewer: NeurIPS, ICML, ICLR, SIGGRAPH, SIGGRAPH Asia, ICCV, CVPR, ECCV, &hellip;</p>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<section id="teaching" class="home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 section-heading"  align="center">
-                <h1>Teaching</h1>
-                
-            </div>
-            <div class="col-xs-12 col-md-12">
-            <br /> 
-                <p>Teaching Assistant:</p>
-
-<ul>
-<li>Fall 2017 and 2019, <a href="https://cornelltech.github.io/cs5785-fall-2017/">CS5785 Applied Machine Learning</a>.</li>
-<li>Fall 2016, <a href="http://www.cs.cornell.edu/Courses/cs4320/2016fa/">CS4320 Introduction to Database Systems</a>.</li>
-</ul>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<footer class="site-footer">
-    <div class="container">
-        <p class="powered-by">
-
-
-            <span class="pull-right"><a href="#" id="back_to_top"><span class="button_icon"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></span></a></span>
-
-        </p>
-    </div>
-</footer>
-
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-        <script src="https://www.xunhuang.me/js/jquery-1.12.3.min.js"></script>
-        <script src="https://www.xunhuang.me/js/bootstrap.min.js"></script>
-        <script src="https://www.xunhuang.me/js/hugo-academic.js"></script>
-        
-
-        
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-83050038-1', 'auto');
-            ga('send', 'pageview');
-
-             
-            var links = document.querySelectorAll('a');
-            Array.prototype.map.call(links, function(item) {
-                if (item.host != document.location.host) {
-                    item.addEventListener('click', function() {
-                        var action = item.getAttribute('data-action') || 'follow';
-                        ga('send', 'event', 'outbound', action, item.href);
-                    });
-                }
-            });
-        </script>
-        
-
-        
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        
-        
-
-    </body>
+    </section>
+</body>
 </html>
 

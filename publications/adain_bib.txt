@@ -1,6 +1,0 @@
-@inproceedings{huang2017adain,
-  title={Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization},
-  author={Huang, Xun and Belongie, Serge},
-  booktitle={ICCV},
-  year={2017}
-}
