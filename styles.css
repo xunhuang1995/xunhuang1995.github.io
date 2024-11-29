@@ -21,6 +21,7 @@ body {
     padding: 20px;
     width: 80%;
     margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 /* Left profile section: for the profile image */
