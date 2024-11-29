@@ -11,227 +11,174 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Container for the profile section */
+/* Container styles */
+.container, .container-large {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile section */
 #profile .container {
     display: flex;
-    align-items: center; /* Align items vertically centered */
+    align-items: center;
     padding: 20px;
-    width: 80%;
-    margin: 0 auto; /* Center the container */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Left profile section: for the profile image */
 .profile-left {
     flex: 1;
+    min-width: 200px;
 }
 
 .profile-photo {
-    width: 250px; /* Adjust the size here */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Add a subtle border-radius */
-    min-width: 200px; /* Make sure the image doesn’t shrink below this size */
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
 }
 
-/* Right profile section: for the text */
 .profile-right {
     flex: 2;
-    padding-left: 30px; /* Space between the photo and text */
+    min-width: 280px;
+    padding: 0;
 }
 
 .profile-right h1 {
     font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1px;
-}
-
-.profile-right p {
-    font-size: 1.1rem;
-    line-height: 1.6;
     margin-bottom: 10px;
 }
 
-.profile-right strong {
-    color: #000;
+/* Publications */
+.publication {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+.publication-image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.publication-details {
+    flex: 1;
+    min-width: 280px;
+}
+
+.publication-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Adjust container width */
+    .container, .container-large {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Stack profile sections */
+    #profile .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-right {
+        padding: 0;
+    }
+
+    /* Adjust font sizes */
+    .profile-right h1 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    /* Make publications full width */
+    .publication {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .publication-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .publication-details {
+        width: 100%;
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    /* Further reduce container padding */
+    .container, .container-large {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Smaller fonts */
+    .profile-right h1 {
+        font-size: 1.6rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    /* Adjust image sizes */
+    .profile-photo {
+        max-width: 200px;
+    }
+
+    .publication-image {
+        max-width: 250px;
+    }
+}
+
+/* Navigation links and spacing */
 .profile-right a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    color: #007bff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .profile-right a:hover {
     text-decoration: underline;
 }
 
-/* Header Section */
-header {
-    width: 100%;
-    background-color: #fff; /* White background for the header */
-    border-bottom: 1px solid #e0e0e0; /* Bottom border for separation */
-    padding: 10px 0; /* Padding inside the header */
+/* Lists styling */
+#research ul, #collaborators ul, #teaching ul {
+    padding-left: 20px;
+    margin: 10px 0;
 }
 
-/* Flexbox container for header */
-.container-header {
-    width: 80%;
-    margin: 0 auto; /* Centers the content horizontally */
-    display: flex;
-    justify-content: space-between; /* Pushes the title left, nav right */
-    align-items: center; /* Vertically centers the content */
+li {
+    margin-bottom: 10px;
 }
 
-.container-large {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-    margin-top: 10px;
-    font-size: large
+/* Section spacing */
+.section {
+    margin: 30px 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-    margin-top: 10px;
-}
-
-/* Title (left side) */
-h1 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #333; /* Darker color for the title */
-}
-
-
-/* Bio Section */
-.bio-content {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 10px;
-}
-
-/* Styling for profile photo */
-.profile-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-/* Bio details styling */
-.bio-details {
-    flex: 1;
-}
-
-/* Research Interests Section */
-#research {
-    margin-top: 10px;
-}
-
-#research h2 {
+h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-#research ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#research ul li {
-    margin-top: 10px;
-}
-
-/* Publications Section */
-#publications {
-    margin-top: 10px;
-}
-
-.publication {
-    display: flex; /* Flexbox layout to align image and text */
-    align-items: center; /* Align items (image and text) vertically in the middle */
-    margin-bottom: 20px; /* Space between publications */
-}
-
-/* Image styling */
-.publication img {
-    width: 200px; /* Set the desired width for the image */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 15px; /* Space between the image and the text */
-}
-
-/* Publication Details */
-.publication-details {
-    flex: 1;
-}
-
-.publication-details h3 {
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-.publication-details p {
-    margin: 5px 0;
-}
-
-.publication-details a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.publication-details a:hover {
-    text-decoration: underline;
-    color: #007bff;
-}
-
-#collaborators ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#collaborators ul li {
-    margin-top: 10px;
-}
-
-/* Collaborators Section */
-#collaborators h2 {
-    margin-bottom: 10px;
-}
-
-#collaborators {
-    margin-top: 10px;
-}
-
-.collaborators {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-#teaching ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#teaching ul li {
-    margin-top: 10px;
-}
-
-/* Collaborators Section */
-#teaching h2 {
-    margin-bottom: 10px;
-}
-
-#teaching {
-    margin-top: 10px;
-}
-
-.teaching {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
