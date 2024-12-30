@@ -38,10 +38,11 @@ body {
 }
 
 .profile-photo {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 5px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
 }
 
 .profile-right {

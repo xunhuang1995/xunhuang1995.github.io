@@ -21,15 +21,17 @@
             </div>
             <div class="profile-right">
                 <h1>Xun Huang</h1>
-                <p>Senior Research Scientist<br>
-                   Adobe Research<br>
+                <p>
+                    Senior Research Scientist, Adobe Research<br>
+                    Visiting Professor, CMU<br>
                    Pittsburgh, PA</p>
                 <p><strong>Email:</strong> xuhuang at adobe dot com</p>
 
                 <p>
                     <a href="https://scholar.google.com/citations?user=1XGC4GsAAAAJ&hl=en&oi=ao">Google Scholar</a> |
+                    <a href="https://x.com/xunhuang1995">Twitter/X</a> |
                     <a href="https://github.com/xunhuang1995">GitHub</a> |
-                    <a href="#publications">Papers</a> |
+                    <a href="#publications">Selected Publications</a> |
                     <a href="#collaborators">Collaborators</a>
                 </p>
             </div>
@@ -40,7 +42,7 @@
     <section id="bio">
         <div class="container-large">
             <p>
-                My name is Xun Huang (pronounced as /shuun hwang/). I am a Senior Research Scientist at Adobe, working on multimodal Generative AI. Prior to joining Adobe, I was a researcher at NVIDIA working on the <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">Picasso and Edify</a>. I obtained my PhD from the Department of Computer Science at Cornell University, advised by <a href="https://www.belongielab.org/">Professor Serge Belongie</a>. During PhD, my research was supported by Adobe Research Fellowship (2019), Snap Research Fellowship (2019), and NVIDIA Graduate Fellowship (2018).
+                My name is Xun Huang (pronounced as /shuun hwang/). I am a Senior Research Scientist at Adobe and also an adjunct professor at CMU. Prior to joining Adobe, I was a researcher at NVIDIA working on large-scale foundation models for visual Generative AI</a>. I obtained my PhD from the Department of Computer Science at Cornell University, advised by <a href="https://www.belongielab.org/">Professor Serge Belongie</a>. During PhD, my research was supported by Adobe Research Fellowship (2019), Snap Research Fellowship (2019), and NVIDIA Graduate Fellowship (2018).
             </p>
         </div>
     </section>
@@ -60,7 +62,7 @@
     <!-- Publications Section -->
     <section id="publications">
         <div class="container">
-            <h2>Publications</h2>
+            <h2>Selected Publications</h2>
             <div class="publication">
                 <img src="imgs/causvid.jpg" alt="CausVid" class="publication-image">
                 <div class="publication-details">
@@ -69,10 +71,15 @@
                     <p>Tianwei Yin*, Qiang Zhang*, Richard Zhang, William T. Freeman, Fredo Durand, Eli Shechtman, Xun Huang</p>
                     <a href="https://arxiv.org/abs/2412.07772">[arXiv]</a>
                     <a href="https://causvid.github.io/ ">[Project]</a>
+                    <p style="color:gray;">
+                        A video generation model that is super fast (~1s initial latency and ~10 FPS streaming generation in real time, on a single GPU) and very high-quality (rank 1st on <a href="https://huggingface.co/spaces/Vchitect/VBench_Leaderboard">VBench</a>).
+                    </p>
+
                 </div>
             </div>
 
-            <div class="publication">
+
+            <!-- <div class="publication">
                 <img src="imgs/jedi.jpeg" alt="Jedi" class="publication-image">
                 <div class="publication-details">
                     <h3>JeDi: Joint-Image Diffusion Models for Finetuning-Free Personalized Text-to-Image Generation</h3>
@@ -81,9 +88,9 @@
                     <a href="https://arxiv.org/abs/2407.06187">[arXiv]</a>
                     <a href="https://research.nvidia.com/labs/dir/jedi/">[Project]</a>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="publication">
+            <!-- <div class="publication">
                 <img src="imgs/diffcollage.jpg" alt="DiffCollage" class="publication-image">
                 <div class="publication-details">
                     <h3>DiffCollage: Parallel Generation of Large Content with Diffusion Models</h3>
@@ -92,16 +99,20 @@
                     <a href="https://arxiv.org/abs/2303.17076">[arXiv]</a>
                     <a href="https://research.nvidia.com/labs/dir/diffcollage/">[Project]</a>
                 </div>
-            </div>
+            </div> -->
 
         <div class="publication">
             <img src="imgs//magic3d.jpg" alt="Magic3D" class="publication-image">
             <div class="publication-details">
                 <h3>Magic3D: High-Resolution Text-to-3D Content Creation</h3>
-                <p><em>CVPR 2023</em></p>
-                <p>Chen-Hsuan Lin, Jun Gao, Luming Tang, Towaki Takikawa, Xiaohui Zeng, Xun Huang, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin</p>
+                <p><em>CVPR 2023 (Highlight)</em></p>
+                <p>Chen-Hsuan Lin*, Jun Gao*, Luming Tang*, Towaki Takikawa*, Xiaohui Zeng*, Xun Huang, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin</p>
                 <a href="https://arxiv.org/abs/2211.10440">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/magic3d">[Project]</a>
+                <a href="https://youtu.be/F1ZNshgvWOA?si=inUjwyPkszrHbm6x">[Video]</a>
+                <p style="color:gray;">
+                    The foundation of NVIDIA's text-to-3D generative models.
+                </p>
             </div>
         </div>
 
@@ -114,6 +125,9 @@
                 <a href="https://arxiv.org/abs/2211.01324">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/eDiff-I">[Project]</a>
                 <a href="https://www.youtube.com/watch?v=WbaVvlgxbl4">[Video]</a>
+                <p style="color:gray;">
+                    The foundation of NVIDIA's large-scale text-to-image generative models.
+                </p>
             </div>
         </div>
 
@@ -126,10 +140,14 @@
                 <a href="https://arxiv.org/abs/2112.05130">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/PoE-GAN/">[Project]</a>
                 <a href="https://www.youtube.com/watch?app=desktop&v=56aA_FaeAPY">[Video]</a>
+                <a href="https://youtu.be/Wbid5rvCGos?si=wcx8AjhvraHhXCCB">[Two Minute Papers]</a>
+                <p style="color:gray;">
+                    Also known as "GauGAN2", one of the earliest AI demos that can create high-resolution images from text and other conditions.
+                </p>
             </div>
         </div>
 
-        <div class="publication">
+        <!-- <div class="publication">
             <img src="imgs//gan_survey.jpg" alt="GAN Survey" class="publication-image">
             <div class="publication-details">
                 <h3>Generative Adversarial Networks for Image and Video Synthesis: Algorithms and Applications</h3>
@@ -137,7 +155,7 @@
                 <p>Xun Huang, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu</p>
                 <a href="https://arxiv.org/abs/2008.02793">[arXiv]</a>
             </div>
-        </div>
+        </div> -->
 
         <div class="publication">
             <img src="imgs//pointflow.gif" alt="PointFlow" class="publication-image">
@@ -148,10 +166,13 @@
                 <a href="https://arxiv.org/abs/1906.12320">[arXiv]</a>
                 <a href="https://github.com/stevenygd/PointFlow">[Code]</a>
                 <a href="https://www.youtube.com/watch?v=jqBiv77xC0M">[Video]</a>
+                <p style="color:gray;">
+                    Formulating point cloud generation as modeling a "distribution of distributions".
+                </p>
             </div>
         </div>
 
-        <div class="publication">
+        <!-- <div class="publication">
             <img src="imgs//funit.gif" alt="FUNIT" class="publication-image">
             <div class="publication-details">
                 <h3>Few-shot Unsupervised Image-to-Image Translation</h3>
@@ -161,7 +182,7 @@
                 <a href="https://github.com/NVlabs/FUNIT/">[Code]</a>
                 <a href="https://www.youtube.com/watch?v=kgPAqsC8PLM">[Video]</a>
             </div>
-        </div>
+        </div> -->
 
         <div class="publication">
             <img src="imgs//munit.jpg" alt="MUNIT" class="publication-image">
@@ -172,10 +193,13 @@
                 <a href="https://arxiv.org/abs/1804.04732">[arXiv]</a>
                 <a href="https://github.com/NVlabs/MUNIT">[Code]</a>
                 <a href="https://youtu.be/ab64TWzWn40?si=w6sb-t2krah7Dtj-">[Video]</a>
+                <p style="color:gray;">
+                    Cited 3,000+ times. One of the most influential papers in image-to-image translation.
+                </p>
             </div>
         </div>
 
-        <div class="publication">
+        <!-- <div class="publication">
             <img src="imgs//captioning.jpg" alt="Image Captioning" class="publication-image">
             <div class="publication-details">
                 <h3>Learning to Evaluate Image Captioning</h3>
@@ -184,9 +208,9 @@
                 <a href="https://arxiv.org/abs/1806.06422">[arXiv]</a>
                 <a href="https://github.com/richardaecn/cvpr18-caption-eval">[Code]</a>
             </div>
-        </div>
+        </div> -->
 
-        <div class="publication">
+        <!-- <div class="publication">
             <img src="imgs//videogen.jpg" alt="Controllable Video Generation" class="publication-image">
             <div class="publication-details">
                 <h3>Controllable Video Generation with Sparse Trajectories</h3>
@@ -195,7 +219,7 @@
                 <a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Hao_Controllable_Video_Generation_CVPR_2018_paper.pdf">[PDF]</a>
                 <a href="https://github.com/zekunhao1995/ControllableVideoGen">[Code]</a>
             </div>
-        </div>
+        </div> -->
 
         <div class="publication">
             <img src="imgs//adain.jpg" alt="AdaIN" class="publication-image">
@@ -205,6 +229,9 @@
                 <p>Xun Huang, Serge Belongie</p>
                 <a href="https://arxiv.org/abs/1703.06868">[arXiv]</a>
                 <a href="https://github.com/xunhuang1995/AdaIN-style">[Code]</a>
+                <p style="color:gray;">
+                    Cited 5,000+ times. The canonical method to inject global information to image/video generative models.
+                </p>
             </div>
         </div>
 
@@ -216,10 +243,17 @@
                 <p>Xun Huang, Yixuan Li, Omid Poursaeed, John Hopcroft, Serge Belongie</p>
                 <a href="https://arxiv.org/abs/1612.04357">[arXiv]</a>
                 <a href="https://github.com/xunhuang1995/SGAN">[Code]</a>
+                <p style="color:gray;">
+                    A pioneering work that trains generative models in the latent space (instead of the data space), a paradigm widely adopted in modern image/video generative models.
+                </p>
             </div>
         </div>
 
-        <div class="publication">
+        * indicates equal contribution.
+        <br>
+        See <a href="https://scholar.google.com/citations?user=1XGC4GsAAAAJ&hl=en&oi=ao">Google Scholar</a> for the full list of publications.
+
+        <!-- <div class="publication">
             <img src="imgs//convpp.png" alt="Convolutional Pseudoprior" class="publication-image">
             <div class="publication-details">
                 <h3>Top-Down Learning for Structured Labeling with Convolutional Pseudoprior</h3>
@@ -227,27 +261,40 @@
                 <p>Saining Xie*, Xun Huang*, Zhuowen Tu (*equal contribution)</p>
                 <a href="http://arxiv.org/abs/1511.07409">[arXiv]</a>
             </div>
-        </div>
+        </div> -->
 
-        <div class="publication">
+        <!-- <div class="publication">
             <img src="imgs//salicon.jpg" alt="SALICON" class="publication-image">
             <div class="publication-details">
                 <h3>SALICON: Reducing the Semantic Gap in Saliency Prediction by Adapting Deep Neural Networks</h3>
                 <p><em>ICCV 2015</em></p>
                 <p>Xun Huang, Chengyao Shen, Xavier Boix, Qi Zhao</p>
                 <a href="https://openaccess.thecvf.com/content_iccv_2015/papers/Huang_SALICON_Reducing_the_ICCV_2015_paper.pdf">[PDF]</a>
-            </div>
+            </div> -->
         </div>
 
     </section>
 
+    <!-- Research Section -->
+    <section id="teaching">
+        <div class="container">
+            <h2>Teaching</h2>
+            <ul>
+                <li>Instructor, <a href="https://cmu-dgm.github.io/">Deep Generative Models (18789)</a>, CMU, 2025 Spring</li>
+                <li>Teaching Assistant, <a href="https://cornelltech.github.io/cs5785-fall-2019/index.html">Applied Machine Learning (CS 5785)</a>, Cornell Tech, 2017 Fall and 2019 Fall</li>
+                <li>Teaching Assistant, <a href="https://www.cs.cornell.edu/courses/cs4320/2016fa/">Introduction to Database Systems (CS 4320)</a>, Cornell, Fall 2016</li>
+            </ul>
+        </div>
+    </section>
+
+
     <!-- Collaborators Section -->
-    <section id="collaborators">
+    <!-- <section id="collaborators">
         <div class="container">
             <h2>Student mentees/interns</h2>
             <p>I have been fortunate to work with many talented students and interns:</p>
             <ul>
-                <li><a href="https://ryanpo.com/">Ryan Po</a>, Stanford</li>
+                <li><a href="https://ryanpo.com/">Po Ryan</a>, Stanford</li>
                 <li><a href="https://tianweiy.github.io/">Tianwei Yin</a>, MIT</li>
                 <li><a href="https://zengyu.me/">Yu Zeng</a>, JHU</li>
                 <li><a href="https://qsh-zh.github.io/">Qinsheng Zhang</a>, Georgia Tech</li>
@@ -256,17 +303,6 @@
                 <li><a href="https://zekunhao.com/">Zekun Hao</a>, Beihang (during undergrad)</li>
             </ul>
         </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="teaching">
-        <div class="container">
-            <h2>Teaching</h2>
-            <ul>
-                <li>Teaching Assistant, <a href="https://cornelltech.github.io/cs5785-fall-2019/index.html">Applied Machine Learning (CS 5785)</a>, Cornell Tech, 2017 Fall and 2019 Fall</li>
-                <li>Teaching Assistant, <a href="https://www.cs.cornell.edu/courses/cs4320/2016fa/">Introduction to Database Systems (CS 4320)</a>, Cornell, Fall 2016</li>
-            </ul>
-        </div>
-    </section>
+    </section> -->
 </body>
 </html>
