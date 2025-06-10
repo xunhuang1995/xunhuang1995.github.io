@@ -51,12 +51,12 @@
     <section id="research">
         <div class="container-large">
             <p>
-                I currently lead the interactive video world model research at Adobe. My definition of a "video world model" is a video generative model that is (1) causal, (2) controllable, (3) real-time, with a high degree of (4) 3D consistency and (5) physical realism, sorted from the most basic to the most advanced requirements. I am also strongly interested in fundamental architecture design of multimodal generative models.
+                I currently lead the interactive video world model research at Adobe. My definition of a "video world model" is a video generative model that is (1) causal, (2) controllable, (3) real-time, with a high degree of (4) 3D consistency and (5) physical realism, sorted from the most basic to the most advanced requirements. I am also strongly interested in fundamental architecture design of generative models.
             </p>
             <br>
-            <p>
+            <!-- <p>
                 Adobe Internship/University Collaboration: While I currently do not have open internship positions, CMU students interested in working with me are welcome to reach out.
-            </p>
+            </p> -->
         </div>
     </section>
 
@@ -65,16 +65,27 @@
         <div class="container">
             <h2>Selected Publications</h2>
             <div class="publication">
+                <img src="imgs/self-forcing.jpg" alt="CausVid" class="publication-image">
+                <div class="publication-details">
+                    <h3>Self Forcing: Bridging the Train-Test Gap in Autoregressive Video Diffusion</h3>
+                    <p><em>arXiv 2025</em></p>
+                    <p><strong><u>Xun Huang</u></strong>, Zhengqi Li, Guande He, Mingyuan Zhou, Eli Shechtman</p>
+                    <a href="https://arxiv.org/abs/2506.08009">[arXiv]</a>
+                    <a href="https://self-forcing.github.io/ ">[Project]</a>
+                    <a href="https://github.com/guandeh17/Self-Forcing ">[Code]</a>
+
+                </div>
+            </div>
+
+            <div class="publication">
                 <img src="imgs/causvid.jpg" alt="CausVid" class="publication-image">
                 <div class="publication-details">
                     <h3>From Slow Bidirectional to Fast Autoregressive Video Diffusion Models</h3>
                     <p><em>CVPR 2025</em></p>
-                    <p>Tianwei Yin*, Qiang Zhang*, Richard Zhang, William T. Freeman, Fredo Durand, Eli Shechtman, Xun Huang</p>
+                    <p>Tianwei Yin*, Qiang Zhang*, Richard Zhang, William T. Freeman, Fredo Durand, Eli Shechtman, <strong><u>Xun Huang</u></strong></p>
                     <a href="https://arxiv.org/abs/2412.07772">[arXiv]</a>
                     <a href="https://causvid.github.io/ ">[Project]</a>
-                    <p style="color:gray;">
-                        A video generation model that is super fast (~1s initial latency and ~10 FPS streaming generation in real time, on a single GPU) and very high-quality (rank 1st on <a href="https://huggingface.co/spaces/Vchitect/VBench_Leaderboard">VBench</a> when submitted).
-                    </p>
+                    <a href="https://github.com/tianweiy/CausVid ">[Code]</a>
 
                 </div>
             </div>
@@ -107,13 +118,10 @@
             <div class="publication-details">
                 <h3>Magic3D: High-Resolution Text-to-3D Content Creation</h3>
                 <p><em>CVPR 2023 (Highlight)</em></p>
-                <p>Chen-Hsuan Lin*, Jun Gao*, Luming Tang*, Towaki Takikawa*, Xiaohui Zeng*, Xun Huang, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin</p>
+                <p>Chen-Hsuan Lin*, Jun Gao*, Luming Tang*, Towaki Takikawa*, Xiaohui Zeng*, <strong><u>Xun Huang</u></strong>, Karsten Kreis, Sanja Fidler, Ming-Yu Liu, Tsung-Yi Lin</p>
                 <a href="https://arxiv.org/abs/2211.10440">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/magic3d">[Project]</a>
                 <a href="https://youtu.be/F1ZNshgvWOA?si=inUjwyPkszrHbm6x">[Video]</a>
-                <p style="color:gray;">
-                    The foundation of NVIDIA's text-to-3D generative models.
-                </p>
             </div>
         </div>
 
@@ -122,13 +130,10 @@
             <div class="publication-details">
                 <h3>eDiff-I: Text-to-Image Diffusion Models with Ensemble of Expert Denoisers</h3>
                 <p><em>arXiv 2022</em></p>
-                <p>Yogesh Balaji, Seungjun Nah, Xun Huang, Arash Vahdat, Jiaming Song, Qinsheng Zhang, Karsten Kreis, Miika Aittala, Timo Aila, Samuli Laine, Bryan Catanzaro, Tero Karras, Ming-Yu Liu</p>
+                <p>Yogesh Balaji, Seungjun Nah, <strong><u>Xun Huang</u></strong>, Arash Vahdat, Jiaming Song, Qinsheng Zhang, Karsten Kreis, Miika Aittala, Timo Aila, Samuli Laine, Bryan Catanzaro, Tero Karras, Ming-Yu Liu</p>
                 <a href="https://arxiv.org/abs/2211.01324">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/eDiff-I">[Project]</a>
                 <a href="https://www.youtube.com/watch?v=WbaVvlgxbl4">[Video]</a>
-                <p style="color:gray;">
-                    The foundation of NVIDIA's large-scale text-to-image generative models.
-                </p>
             </div>
         </div>
 
@@ -137,14 +142,11 @@
             <div class="publication-details">
                 <h3>Multimodal Conditional Image Synthesis with Product-of-Experts GANs</h3>
                 <p><em>ECCV 2022</em></p>
-                <p>Xun Huang, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu</p>
+                <p><strong><u>Xun Huang</u></strong>, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu</p>
                 <a href="https://arxiv.org/abs/2112.05130">[arXiv]</a>
                 <a href="https://research.nvidia.com/labs/dir/PoE-GAN/">[Project]</a>
                 <a href="https://www.youtube.com/watch?app=desktop&v=56aA_FaeAPY">[Video]</a>
                 <a href="https://youtu.be/Wbid5rvCGos?si=wcx8AjhvraHhXCCB">[Two Minute Papers]</a>
-                <p style="color:gray;">
-                    Also known as "GauGAN2", one of the earliest AI demos that can create high-resolution images from text and other conditions.
-                </p>
             </div>
         </div>
 
@@ -163,13 +165,10 @@
             <div class="publication-details">
                 <h3>PointFlow: 3D Point Cloud Generation with Continuous Normalizing Flows</h3>
                 <p><em>ICCV 2019 (Oral)</em></p>
-                <p>Guandao Yang*, Xun Huang*, Zekun Hao, Ming-Yu Liu, Serge Belongie, Bharath Hariharan (*equal contribution)</p>
+                <p>Guandao Yang*, <strong><u>Xun Huang</u></strong>*, Zekun Hao, Ming-Yu Liu, Serge Belongie, Bharath Hariharan</p>
                 <a href="https://arxiv.org/abs/1906.12320">[arXiv]</a>
                 <a href="https://github.com/stevenygd/PointFlow">[Code]</a>
                 <a href="https://www.youtube.com/watch?v=jqBiv77xC0M">[Video]</a>
-                <p style="color:gray;">
-                    Formulating point cloud generation as modeling a "distribution of distributions".
-                </p>
             </div>
         </div>
 
@@ -190,13 +189,10 @@
             <div class="publication-details">
                 <h3>Multimodal Unsupervised Image-to-Image Translation</h3>
                 <p><em>ECCV 2018</em></p>
-                <p>Xun Huang, Ming-Yu Liu, Serge Belongie, Jan Kautz</p>
+                <p><strong><u>Xun Huang</u></strong>, Ming-Yu Liu, Serge Belongie, Jan Kautz</p>
                 <a href="https://arxiv.org/abs/1804.04732">[arXiv]</a>
                 <a href="https://github.com/NVlabs/MUNIT">[Code]</a>
                 <a href="https://youtu.be/ab64TWzWn40?si=w6sb-t2krah7Dtj-">[Video]</a>
-                <p style="color:gray;">
-                    Cited 3,000+ times. One of the most influential papers in image-to-image translation.
-                </p>
             </div>
         </div>
 
@@ -227,12 +223,9 @@
             <div class="publication-details">
                 <h3>Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization</h3>
                 <p><em>ICCV 2017 (Oral)</em></p>
-                <p>Xun Huang, Serge Belongie</p>
+                <p><strong><u>Xun Huang</u></strong>, Serge Belongie</p>
                 <a href="https://arxiv.org/abs/1703.06868">[arXiv]</a>
                 <a href="https://github.com/xunhuang1995/AdaIN-style">[Code]</a>
-                <p style="color:gray;">
-                    Cited 5,000+ times. The canonical method to inject global information to image/video/audio generative models.
-                </p>
             </div>
         </div>
 
@@ -241,12 +234,9 @@
             <div class="publication-details">
                 <h3>Stacked Generative Adversarial Networks</h3>
                 <p><em>CVPR 2017</em></p>
-                <p>Xun Huang, Yixuan Li, Omid Poursaeed, John Hopcroft, Serge Belongie</p>
+                <p><p><strong><u>Xun Huang</u></strong>, Yixuan Li, Omid Poursaeed, John Hopcroft, Serge Belongie</p>
                 <a href="https://arxiv.org/abs/1612.04357">[arXiv]</a>
                 <a href="https://github.com/xunhuang1995/SGAN">[Code]</a>
-                <p style="color:gray;">
-                    A pioneering work that trains generative models in the latent space (instead of the data space), a paradigm widely adopted in modern generative models.
-                </p>
             </div>
         </div>
 
