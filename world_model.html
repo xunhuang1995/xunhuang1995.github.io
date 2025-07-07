@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Model - Xun Huang's Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 800px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .toc-sidebar {
+            width: 320px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 3px solid #00cc33;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 30px 0 15px 0;
+            color: #34495e;
+            border-left: 4px solid #00cc33;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin: 25px 0 10px 0;
+            color: #2c3e50;
+        }
+
+        h4 {
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            color: #34495e;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .toc-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #00cc33;
+            padding-bottom: 5px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 8px;
+        }
+
+        .toc-list a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9em;
+            line-height: 1.4;
+            display: block;
+            padding: 5px 0;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list a:hover {
+            background-color: #f8f9fa;
+            color: #00cc33;
+            padding-left: 8px;
+        }
+
+        .toc-list .toc-h2 {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .toc-list .toc-h3 {
+            margin-left: 15px;
+            font-size: 0.85em;
+        }
+
+        .toc-list .toc-h4 {
+            margin-left: 30px;
+            font-size: 0.8em;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        blockquote {
+            border-left: 4px solid #00cc33;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        figure img {
+            margin: 0;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .toc-sidebar {
+                width: 100%;
+                position: static;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <a href="index.html" class="back-link">Back to Homepage</a>
+
+            <div class="date">July 15, 2025</div>
+
+            <h1>Towards Video World Models</h1>
+
+            <p>
+                The term "world model" has gained considerable popularity in 2025, yet it remains without a clear, universally agreed-upon definition. In this blog post, I will first disentangle the term by clarifying distinct paradigms that are all commonly referred to as world models. I will then focus specifically on video world models, a particular class of world models aimed at simulating the world through video prediction methods. Additionally, I will discuss why popular video generators (e.g., OpenAI’s Sora or Google's Veo3) do not yet qualify as true world models, and outline a path toward bridging this gap within video generation frameworks.
+            </p>
+
+            <!-- <div class="highlight">
+                <strong>Key Insight:</strong> World models are not just about prediction—they're about
+                understanding the fundamental principles that govern how the world works.
+            </div> -->
+
+            <h2>What Are World Models? <br> Understanding versus Simulating the World</h2>
+
+            <p>
+                In general, a world model predicts how the world will evolve given the current state and an action; in other words, it learns a function that takes a current world state s(t) and an action a(t), and outputs the next state s(t+1). However, there is no consensus on what constitutes this state. Some researchers define it as an abstract representation of the world, in which case the world model mirrors the cognitive world model in the human brain that predict events at a high, semantic level.
+                Others, on the other hand, consider the world state to be a detailed and complete description of the world.
+                In that case, the world model is a fully realistic world simulator, akin to <i>The Matrix</i>—a high-fidelity simulation virtually indistinguishable from reality. <strong>Despite their differing goals and methodologies, both paradigms are commonly referred to as "world models.</strong>"
+            </p>
+            <figure>
+                <img src="imgs/blog/world_model.jpg" alt="Description">
+                <figcaption>Figure 1: An internal "world model" in the human brain that predicts the coarse future, versus an external "world model" that aims to simulate every detail of the reality. Figure modified from <a href="https://leshouches2022.github.io/SLIDES/compressed-yann-1.pdf">Yann LeCun's slides</a>.</figcaption>
+            </figure>
+            <p>
+                While this blog post focuses on the latter definition—world models that simulates details of the world, I will also briefly discuss the former definition here for completeness.
+                There has been debate on whether large language models (LLMs) trained only on text can develop sufficient world understanding. While LLMs clearly absorb a vast amount of world knowledge, many researchers argue that pure text-based learning leaves gaping holes in an AI’s understanding of reality. This limitation is well captured by <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">Sergey Levine's analogy</a> to Plato’s Allegory of the Cave, where an LLM is like an observer confined to a cave, seeing only shadows—textual data on the internet—cast by real-world events. To build a truly faithful world model, an AI would need to venture beyond the cave of text and directly perceive the world through vision, action, and interaction.
+                Another approach in this direction is LeCun’s JEPA. The latest version (V-JEPA 2) is trained to predict the abstract representations of future video frames conditioned on past video frames and actions.
+            </p>
+
+            <figure>
+                <img src="imgs/blog/taxonomy.jpg" alt="Description">
+                <figcaption>Figure 2: A taxonomy of different definitions and approaches to world models.</figcaption>
+            </figure>
+
+            <h2>Video World Models</h2>
+
+            <h3>Causal</h3>
+
+            <blockquote>
+                "You see, there is only one constant, one universal, it is the only real truth: causality. Action. Reaction. Cause and effect." — Merovingian, "The Matrix Reloaded"
+            </blockquote>
+            <figure>
+                <img src="imgs/blog/causvid.jpg" alt="Description">
+                <figcaption>Figure 3: CausVid transforms a pretrained video diffusion model with bidirectional attention into an autoregressive video diffusion model with causal attention.</figcaption>
+            </figure>
+
+            <h3>Interactive</h3>
+            <p>
+                Neural network-based models that learn world dynamics from data. These can capture complex,
+                non-linear relationships that are difficult to model analytically.
+            </p>
+
+            <h3>Persistent</h3>
+            <figure>
+                <img src="imgs/blog/sswm.png" alt="Description">
+                <figcaption>Figure 4: State-Space Video World Model integrates multiple block-wise SSM scans to enable long-term memory, together with local attention mechanisms for enhanced visual fidelity.</figcaption>
+            </figure>
+
+            <h3>Real-Time</h3>
+
+            <h3>Physically Accurate</h3>
+
+            <h2>Other Approaches to World Simulation</h2>
+
+            <h2>Conclusion</h2>
+            <figure>
+                <img src="imgs/blog/pyramid.jpg" alt="Description">
+                <figcaption>Figure 1: Levels of video world models as a dual-head pyramid.</figcaption>
+            </figure>
+
+            <p>
+                World models represent a fundamental shift in how we think about AI systems. Rather than
+                just learning patterns in data, these models attempt to understand the underlying structure
+                of reality itself. As research in this area progresses, we can expect to see AI systems
+                that are more robust, more generalizable, and more capable of reasoning about complex
+                real-world scenarios.
+            </p>
+        </div>
+
+        <div class="toc-sidebar">
+            <div class="toc-title">Table of Contents</div>
+            <ul class="toc-list">
+                <li><a href="#what-are-world-models" class="toc-h2">What Are World Models?</a>
+                </li>
+                <li><a href="#video-world-models" class="toc-h2">Requirements for Video World Models</a>
+                    <ul>
+                        <li><a href="#causality" class="toc-h3">Causal</a></li>
+                        <li><a href="#interaction" class="toc-h3">Interactive</a></li>
+                        <li><a href="#persistence" class="toc-h3">Persistent</a></li>
+                        <li><a href="#real-time" class="toc-h3">Real-Time</a></li>
+                        <li><a href="#physically-accurate" class="toc-h3">Physically Accurate</a></li>
+                    </ul>
+                </li>
+                <li><a href="#types-of-world-models" class="toc-h2">Other Approaches to World Simulation</a>
+                    <ul>
+                        <li><a href="#physics-based-models" class="toc-h3">Simulation Platforms</a></li>
+                        <li><a href="#learned-models" class="toc-h3">Neural 3D/4D</a></li>
+                        <li><a href="#hybrid-models" class="toc-h3">Hybrid Models</a></li>
+                    </ul>
+                </li>
+                <li><a href="#conclusion" class="toc-h2">Conclusion</a></li>
+                <li><a href="#citation" class="toc-h2">Citation</a></li>
+                <li><a href="#references" class="toc-h2">References</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for table of contents links
+        document.querySelectorAll('.toc-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add IDs to headings for navigation
+        document.querySelectorAll('h2, h3').forEach((heading, index) => {
+            if (!heading.id) {
+                heading.id = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            }
+        });
+    </script>
+</body>
+</html>
