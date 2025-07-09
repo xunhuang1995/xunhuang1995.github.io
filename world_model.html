@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Model - Xun Huang's Blog</title>
+    <title>Towards Video World Models</title>
     <style>
         * {
             margin: 0;
@@ -180,6 +180,69 @@
             color: #555;
         }
 
+        .matrix-quote {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #00ff00;
+            font-style: normal;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            animation: matrix-glow 3s ease-in-out infinite alternate;
+        }
+
+        .matrix-quote::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ff00, #008800, #00ff00);
+            border-radius: 8px;
+            z-index: -1;
+            animation: matrix-border 2s linear infinite;
+        }
+
+        .matrix-quote .quote-text {
+            font-size: 1.0em;
+            line-height: 1.6;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .matrix-quote .quote-author {
+            text-align: right;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #00cc00;
+            font-weight: bold;
+        }
+
+        @keyframes matrix-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            }
+        }
+
+        @keyframes matrix-border {
+            0% {
+                background: linear-gradient(45deg, #00ff00, #008800, #00ff00);
+            }
+            50% {
+                background: linear-gradient(45deg, #008800, #00ff00, #008800);
+            }
+            100% {
+                background: linear-gradient(45deg, #00ff00, #008800, #00ff00);
+            }
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -210,6 +273,8 @@
             font-size: 0.9em;
             margin-bottom: 20px;
         }
+
+
 
         @media (max-width: 768px) {
             .container {
@@ -245,26 +310,16 @@
                 The term "world model" has gained considerable popularity in 2025, yet it remains without a clear, universally agreed-upon definition. In this blog post, I will first disentangle the term by clarifying distinct paradigms that are all commonly referred to as world models. I will then focus specifically on video world models, a particular class of world models aimed at simulating the world through video prediction methods. Additionally, I will discuss why popular video generators (e.g., OpenAI’s Sora or Google's Veo3) do not yet qualify as true world models, and outline a path toward bridging this gap within video generation frameworks.
             </p>
 
-            <!-- <div class="highlight">
-                <strong>Key Insight:</strong> World models are not just about prediction—they're about
-                understanding the fundamental principles that govern how the world works.
-            </div> -->
+            <h2 id="what-are-world-models">What Are World Models? <br> Understanding versus Simulating the World</h2>
 
-            <h2>What Are World Models? <br> Understanding versus Simulating the World</h2>
-
-            <p>
-                In general, a world model predicts how the world will evolve given the current state and an action; in other words, it learns a function that takes a current world state s(t) and an action a(t), and outputs the next state s(t+1). However, there is no consensus on what constitutes this state. Some researchers define it as an abstract representation of the world, in which case the world model mirrors the cognitive world model in the human brain that predict events at a high, semantic level.
-                Others, on the other hand, consider the world state to be a detailed and complete description of the world.
-                In that case, the world model is a fully realistic world simulator, akin to <i>The Matrix</i>—a high-fidelity simulation virtually indistinguishable from reality. <strong>Despite their differing goals and methodologies, both paradigms are commonly referred to as "world models.</strong>"
-            </p>
             <figure>
                 <img src="imgs/blog/world_model.jpg" alt="Description">
                 <figcaption>Figure 1: An internal "world model" in the human brain that predicts the coarse future, versus an external "world model" that aims to simulate every detail of the reality. Figure modified from <a href="https://leshouches2022.github.io/SLIDES/compressed-yann-1.pdf">Yann LeCun's slides</a>.</figcaption>
             </figure>
             <p>
-                While this blog post focuses on the latter definition—world models that simulates details of the world, I will also briefly discuss the former definition here for completeness.
-                There has been debate on whether large language models (LLMs) trained only on text can develop sufficient world understanding. While LLMs clearly absorb a vast amount of world knowledge, many researchers argue that pure text-based learning leaves gaping holes in an AI’s understanding of reality. This limitation is well captured by <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">Sergey Levine's analogy</a> to Plato’s Allegory of the Cave, where an LLM is like an observer confined to a cave, seeing only shadows—textual data on the internet—cast by real-world events. To build a truly faithful world model, an AI would need to venture beyond the cave of text and directly perceive the world through vision, action, and interaction.
-                Another approach in this direction is LeCun’s JEPA. The latest version (V-JEPA 2) is trained to predict the abstract representations of future video frames conditioned on past video frames and actions.
+                In general, a world model predicts how the world will evolve given the current state and an action; in other words, it learns a function that takes a current world state and an action, and outputs the next state. However, there is no consensus on what constitutes this state. Some researchers define it as an abstract representation of the world, in which case the world model mirrors the cognitive world model in the human brain that predict events at a high, semantic level.
+                Others, on the other hand, consider the world state to be a detailed and complete description of the world.
+                In that case, the world model is a fully realistic world simulator, akin to <i>The Matrix</i>—a high-fidelity simulation virtually indistinguishable from reality. <strong>Despite their differing goals and methodologies, both paradigms are commonly referred to as "world models.</strong>"
             </p>
 
             <figure>
@@ -272,49 +327,234 @@
                 <figcaption>Figure 2: A taxonomy of different definitions and approaches to world models.</figcaption>
             </figure>
 
-            <h2>Video World Models</h2>
+            <p>
+                While this blog focuses on the second definition of world models—simulations that capture the structure of the world—I will briefly touch on the first for completeness.
+                <!-- There's ongoing debate about whether large language models (LLMs), trained solely on text, can truly understand the world.  -->
+                Though LLMs absorb vast textual knowledge, many argue this leaves critical gaps in their grasp of reality.
+                As Sergey Levine <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">analogizes</a> via Plato’s Allegory of the Cave, an LLM sees only the shadows—textual traces—of real-world events.
+                To build a truly grounded world model, an AI must go beyond text and engage with the world through vision, action, and interaction.
+                Recent multimodal models like <a href="https://arxiv.org/abs/2402.08268">LWM</a>, which are trained on long-context text and video, show promise in this direction.
+                Similarly, LeCun’s JEPA series (<i>e.g.</i>, <a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/">V-JEPA 2</a>) advances this goal by predicting masked abstract video representations.
+            </p>
+            <p>
+                While simulating pixel-level details may not be essential for intelligence—<a href="https://www.facebook.com/share/p/1BBDeNBe8g/">as LeCun has argued</a>—there remain many applications that require high-fidelity world simulators. Realistic simulations enable robots to learn complex tasks without the cost and limitations of real-world interaction, and they can also provide human users with immersive, interactive experiences. In both cases, high-quality visuals are crucial: robots need detailed visual inputs to bridge the sim-to-real gap, while humans rely on realistic imagery to experience genuine immersion.
+                In robotics, internal world-understanding models and external simulation models can work together—robots can plan and act using internal models trained through interaction with realistic simulated environments.
+            </p>
 
-            <h3>Causal</h3>
+            <div class="highlight">
+                <strong>Key Insight:</strong> "World model" is an overloaded term that can refer to either an internal world understanding model or an external world simulation model. Both models could be complementary in developing physical intelligence.
+            </div>
 
-            <blockquote>
-                "You see, there is only one constant, one universal, it is the only real truth: causality. Action. Reaction. Cause and effect." — Merovingian, "The Matrix Reloaded"
-            </blockquote>
+            <p>
+                Several approaches exist for building high-fidelity world simulators, including <strong>video world models</strong>, physics-based simulation platforms, and neural 3D/4D modeling techniques. In the following section, I will focus on video world models and outline a pathway from the current state-of-the-art video generation systems toward true world models.
+            </p>
+
+            <h2 id="video-world-models">Video World Models</h2>
+            The past few years have seen significant progress in video generation, with state-of-the-art systems now capable of generating photorealistic details with physically realistic dynamics (such as Veo3 from Google). Demis Hassabis, CEO of Google DeepMind, hinted at the potential for developing an interactive world model with applications in gaming.
+
+            <div style="display: flex; justify-content: center;">
+                <blockquote class="twitter-tweet" data-theme="light">
+                    <p lang="en" dir="ltr"></p>
+                    <a href="https://twitter.com/demishassabis/status/1940248521111961988"></a>
+                </blockquote>
+            </div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <p>
+                But why aren't current video generation models considered true world models yet? What precisely is lacking, and how can we bridge this gap? I argue that a true video world model must possess several key properties: <strong>causality, interactivity, persistence, real-time responsiveness, and physical accuracy</strong>. In the following sections, I explore each of these properties in detail, discussing why they are important and reviewing existing research on each topic.
+            </p>
+
+            <h3 id="causality">Causal</h3>
+
+            <div class="matrix-quote">
+                <div class="quote-text">
+                    "You see, there is only one constant, one universal, it is the only real truth: causality. Action. Reaction. Cause and effect."
+                </div>
+                <div class="quote-author">
+                    — Merovingian, "The Matrix Reloaded"
+                </div>
+            </div>
+
+            <p>
+                Causality
+                 <span id="causality-trigger" style="cursor: pointer; color: #007bff; font-weight: 500; margin-right: 4px;">
+                     <span style="font-size: 0.9em; border: 1px solid #007bff; border-radius: 3px; padding: 2px 6px;">+</span>
+                 </span>
+                is a fundamental property of the universe.
+                However, state-of-the-art video generation models predominantly employ diffusion transformers (DiTs), which generate a fixed set of frames simultaneously using non-causal, bidirectional attention. Such bidirectional attention allows future frame information to influence the past, violating the inherent temporal asymmetry of reality. As a result, after generating the initial frame, the entire video sequence becomes predetermined, eliminating the possibility for users to dynamically interact or influence subsequent events.
+            </p>
+
+             <!-- Tooltip for causality explanation -->
+             <div id="causality-modal" style="display: none; position: absolute; z-index: 1000; background-color: white; padding: 20px; border-radius: 8px; max-width: 550px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #ddd;">
+                 <span id="causality-close" style="position: absolute; right: 8px; top: 5px; color: #aaa; font-size: 18px; font-weight: bold; cursor: pointer;">&times;</span>
+                 <h4 style="margin: 0 0 10px 0; color: #2c3e50; font-size: 1.1em;">Causality</h4>
+                 <p style="color: #666; line-height: 1.5; margin: 0; font-size: 0.9em;">
+                     In this context, causality differs from the concept in causal machine learning, where the focus is on distinguishing causation from correlation. Instead, it refers to the unidirectional nature of time, where the past determines the future, not vice versa.
+                 </p>
+             </div>
+
+            <p>
+                Bringing causal dependencies and autoregressive, frame-by-frame generation capabilities to video generation systems is a first step towards true world models. Without it, real-time interaction is impossible.
+                While LLM-style autoregressive models are inherently causal and have been applied to video generation, <i>e.g.</i>, <a href="https://arxiv.org/abs/2205.15868">CogVideo</a> and <a href="https://sites.research.google/videopoet/">VideoPoet</a>, their quality is severely limited due to the reliance on lossy vector quantization to obtain a discrete latent space. Also, generating one token at a time is slow and cannot be easily parallelized, making it very challenging to achieve real-time speed.
+            </p>
+
+            <p>
+                <strong>It would be great if we can combine the quality/speed of diffusion models with the causality of autoregressive models.</strong>
+                <a href="https://arxiv.org/abs/2407.01392">Diffusion Forcing</a> demonstrates that training diffusion models with per-frame independent noise levels enables autoregressive generation capabilities. Although Chen et al. primarily experiment with simple RNN architectures trained on synthetic datasets, <a href="https://causvid.github.io/">CausVid</a> shows that video diffusion transformers with bidirectional attention pretrained on internet-scale video datasets can be successfully adapted into autoregressive diffusion transformers (AR-DiT) with causal attention. <a href="https://github.com/SandAI-org/MAGI-1">MAGI-1</a> explores pretraining such AR-DiTs from scratch and proposes several infrastructure improvements designed for this type of architecture.
+            </p>
+
             <figure>
                 <img src="imgs/blog/causvid.jpg" alt="Description">
-                <figcaption>Figure 3: CausVid transforms a pretrained video diffusion model with bidirectional attention into an autoregressive video diffusion model with causal attention.</figcaption>
+                <figcaption>Figure 3: <a href="https://causvid.github.io/">CausVid</a> transforms a pretrained video diffusion model with bidirectional attention into a few-step, autoregressive video diffusion model with causal attention.</figcaption>
             </figure>
 
-            <h3>Interactive</h3>
             <p>
-                Neural network-based models that learn world dynamics from data. These can capture complex,
-                non-linear relationships that are difficult to model analytically.
+                A causal generative model without interactive controllability is a passive world simulator operating in observer mode. To be genuinely useful in practice, a world model must support interactive controls, enabling real-time user or agent engagement with the simulated environment.
             </p>
 
-            <h3>Persistent</h3>
+            <h3 id="interactive">Interactive</h3>
+            <p>
+                 Interactive controllability is a defining characteristic for video world models. It refers to <strong>the ability to influence the future evolution of a simulated world through input that are injected on the fly</strong>. The nature of these controls varies across applications: a gamer might move characters and manipulate objects, a robot must execute motor commands supported by the hardware, while an autonomous vehicle makes steering and acceleration decisions. What unites these diverse scenarios is the fundamental requirement that the world model must respond dynamically to external interventions, adapting its predictions as new actions are introduced.
+             </p>
+
+             <p>
+                <!-- Interactive controllability has been a defining feature for video world models.  -->
+                Early approaches primarily explored game action controls and commonly employed recurrent variational autoencoders as generative world models  (<a href="https://worldmodels.github.io/">Ha and Schmidhuber 2018</a>; <a href="https://arxiv.org/abs/1912.01603">Hafner et al., 2020</a>; <a href="https://research.google/blog/mastering-atari-with-discrete-world-models/">Hafner et al., 2021</a>). More recently, research has shifted towards (autoregressive) diffusion models conditioned on interactive actions (<a href="https://gamengen.github.io/">Valevski et al., 2024</a>; <a href="https://diamond-wm.github.io/">Alonso et al., 2024</a>), often trained on increasingly realistic game environments (<a href="https://thematrix1999.github.io/">Feng et al., 2024</a>; <a href="https://gamegen-x.github.io/">Che et al., 2025</a>; <a href="https://hunyuan-gamecraft.github.io/">Li et al., 2025</a>). Other forms of application-specific action spaces have also been investigated, such as driving maneuvers in autonomous vehicles (<a href="https://wayve.ai/science/gaia/">Hu et al., 2023</a>) and locomotion actions in navigation robots (<a href="https://www.amirbar.net/nwm/">Bar et al., 2025</a>).
+             </p>
+
+             <p>
+                A key challenge in enabling interactive controllability is obtaining paired training data—video frames aligned with corresponding actions. While this is relatively straightforward in gaming environments, it remains an open problem how to harness unlabeled, internet-scale video data to train world models with interactive controllability. <a href="https://sites.google.com/view/genie-2024/home">Genie</a> explored unsupervised action learning from unlabeled videos, and its successor, <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie-2</a> showed impressive results by leveraging AR-DiT architecture.
+             </p>
+
+             <figure>
+                 <video autoplay loop muted style="width: 100%; max-width: 800px;">
+                     <source src="imgs/blog/genie.mp4" type="video/mp4">
+                     Your browser does not support the video tag.
+                 </video>
+                 <figcaption>Figure 4: <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie-2</a> generates different future conditioned on different interactive actions.</figcaption>
+             </figure>
+
+            <h3 id="persistence">Persistent</h3>
+            <p>
+                Generating just a few seconds of video is insufficient for most applications of world simulation. Ideally, a video world model should be capable of producing videos of indefinite length—or at the very least, videos <strong>long enough</strong> to support meaningful tasks. More critically, the model must ensure <strong>consistency across time</strong>, maintaining coherence with its own prior generations. This property, which I refer to as persistence, is another essential requirement for video world models.
+            </p>
+
+            <p>
+                At first glance, generating long, consistent videos might appear to be merely a scaling problem: in theory, a transformer with an extremely long context window, trained on sufficiently long-duration data, should be capable of maintaining temporal coherence. However, another critical requirement of a world model—real-time responsiveness (which I will discuss shortly)—complicates the issue. Unlike LLM applications where users can tolerate increased inference time as the context window grows, video world models face a hard latency constraint. For interactive applications such as games, it is unacceptable for the system to slow down over time. A world model that becomes increasingly laggy over time would make the experience unplayable.
+            </p>
+
+            <p>
+                Researchers have proposed various techniques to address this challenge.
+                One common strategy introduces an inductive bias that aggressively compresses temporally distant frames, as in <a href="https://farlongctx.github.io/">FAR</a> and <a href="https://lllyasviel.github.io/frame_pack_gitpage/">FramePack</a>. While it works well for scenarios where the recent frames contain sufficient information for prediction, it might fail when crucial details are buried in earlier frames—resembling the "needle in a haystack" problem in LLMs.
+                Another line of work integrates video generation with persistent 3D conditions (<a href="https://research.nvidia.com/labs/toronto-ai/GEN3C/">Ren et al., 2025</a>, <a href="https://zqh0253.github.io/wvd/">Zhang et al., 2025</a>, <a href="https://spmem.github.io/">Wu et al., 2025</a>, <a href="https://arxiv.org/abs/2505.05495">Zhou et al., 2024</a>).
+                While effective in static scenes, these approaches struggle to model dynamic environments due to the complexity of representing explicit 4D structures.
+                Finally, a promising direction is to use a linear RNNs, such as state-space models to capture long-range temporal dependencies without increasing per-frame generation time, as first explored by <a href="https://ryanpo.com/ssm_wm/">Po et al., 2025</a>. Their approach integrates a linear RNN with 3D hidden states and incorporates local attention mechanisms, which closely resembles classic <a href="https://proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> architectures widely used for video prediction in the pre-transformer era.
+            </p>
+
             <figure>
                 <img src="imgs/blog/sswm.png" alt="Description">
-                <figcaption>Figure 4: State-Space Video World Model integrates multiple block-wise SSM scans to enable long-term memory, together with local attention mechanisms for enhanced visual fidelity.</figcaption>
+                <figcaption>Figure 5: <a href="https://ryanpo.com/ssm_wm/">State-Space Video World Model</a> integrates block-wise SSM scans with 3D hidden states to enable long-term memory, together with local attention mechanisms for enhanced visual fidelity.</figcaption>
             </figure>
 
-            <h3>Real-Time</h3>
+            <h3 id="real-time">Real-Time</h3>
+            <p>
+                <!-- Real-time, interactive experience is an essential requirement for video world models, but what exactly does it mean to be real-time? There are two metrics that measure the efficiency of a video world model: throughput and latency. Throughput is the number of frames generated per second. A necessary condition for real-time experience is real-time throughput, which means that the model can generate a frame faster than people watch it. -->
+                A video world model that aims to provide interactive experience for human users needs to run in real-time, but what exactly does "real-time" mean in this context? To assess whether a model operates in real-time, two metrics need to be considered: <strong>throughput</strong> and <strong>latency</strong>. Throughput refers to the number of frames generated per second by the model, while latency is the delay between each interactive action and the frame that responds to it. Achieving real-time throughput—where the model generates frames at or above the rate that users consume them—is a necessary condition for delivering a real-time experience.
+            </p>
 
-            <h3>Physically Accurate</h3>
+            <p>
+                However, <strong>real-time throughput is not sufficient</strong>. The latency of the model must also be low enough to be imperceptible to the user. The latency generally needs to be less than a second, and the specific latency threshold varies across applications. For example, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4654242">studies</a> have showed that the acceptable latency is about one second for live streaming, 0.1s for gaming, and 0.01s for virtual reality. And here is another reason why causal/autoregressive generation is so fundamental to video world models: a model with non-causal dependencies that generates a t-second video at a time has a minimum latency of t seconds in response to frame-wise interactive actions. Therefore, <strong>a non-causal diffusion model will never achieve truly real-time latency</strong>, regardless of how fast throughput the model can achieve.
+            </p>
 
-            <h2>Other Approaches to World Simulation</h2>
+            <p>
+                To enable real-time experience, it's crucial to integrate <strong>causal, frame-by-frame autoregressive modeling with a fast, few-step distilled diffusion</strong> process to generate each frame.
+                <a href="https://causvid.github.io/">CausVid</a> was a pioneer in this direction, introducing AR-DiT trained with Distribution Matching Distillation (<a href="https://tianweiy.github.io/dmd/">DMD</a>).
+                The follow-up work, <a href="https://self-forcing.github.io/">Self-Forcing</a>, further improves the quality and speed by simulating the inference process (autoregressive rollout with KV caching) during training. It achieves real-time throughput (17FPS) and subsecond latency on a single GPU, while matching the quality of state-of-the-art open-source video diffusion models. <a href="https://seaweed-apt.com/2">APT2</a> explores a similar idea of training-time rollout, and further demonstrates that such real-time video models can be finetuned with interactive controls.
+                There have also been demos from startups such as <a href="https://oasis.decart.ai/welcome">Decart</a>, <a href="https://experience.odyssey.world/">Odyssey</a>, and <a href="https://blog.dynamicslab.ai/">Dynamics Lab</a>, though their quality and generalizability still lag behind state-of-the-art video generation models.
+            </p>
 
-            <h2>Conclusion</h2>
             <figure>
-                <img src="imgs/blog/pyramid.jpg" alt="Description">
-                <figcaption>Figure 1: Levels of video world models as a dual-head pyramid.</figcaption>
+                <video autoplay loop muted style="width: 100%; max-width: 800px;">
+                    <source src="imgs/blog/self-forcing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Figure 6: <a href="https://self-forcing.github.io/">Self-Forcing</a> generates photorealistic videos with real-time throughput and subsecond latency.</figcaption>
+            </figure>
+
+
+            <p></p>
+
+            <h3 id="physically-accurate">Physically Accurate</h3>
+            <p>
+                The ultimate goal of video world models is to serve as a world simulator that is indistinguishable from reality. This requires the model  not only to generate visually pleasing pixels, but also to adhere to real-world physics. While the physical realism of these models generally improves as they are scaled with more data and parameters, it remains unclear whether current models can truly learn generalizable and extrapolative physical laws. <a href="https://phyworld.github.io/">Kang et al.</a> introduce a simple 2D dataset generated via a physics simulator and evaluate the generalization capabilities of video models trained on this data. They find that although combinatorial generalization is achievable, existing models still fail to generalize in extrapolative scenarios where the observed physical properties (<i>e.g.</i>, velocity, mass) are out of distribution.
+            </p>
+
+            <p>
+                While this result seems to suggest a doomed future, it doesn’t mean video world models can’t effectively simulate the world in most practical scenarios. Unless you're trying to model cutting-edge physics experiments, the use cases are likely going to be compositionally similar to those found in large internet-scale video datasets. After all, if the training distribution covers the entire world, there is nothing out of distribution. 😉
+                <!-- While this may sound like a doomed future, it doesn't mean we cannot use video models to simluate the world in most applications where there are compositionally similar scenarios in internet video datasets (unless you want to use video models to simulate frontier physics experiments). As long as the training distribution covers the entire world, there is nothing out of distribution ;). -->
+            </p>
+
+            <figure>
+                <img src="imgs/blog/ood.jpeg" alt="Description" style="padding-left: 200px; padding-right: 200px;">
+                <figcaption>Figure 7: Meme from <a href="https://youtu.be/ZZC_xqRgcHo?t=1290">Tim Rocktaeschel's talk</a> on world models.</figcaption>
             </figure>
 
             <p>
-                World models represent a fundamental shift in how we think about AI systems. Rather than
-                just learning patterns in data, these models attempt to understand the underlying structure
-                of reality itself. As research in this area progresses, we can expect to see AI systems
-                that are more robust, more generalizable, and more capable of reasoning about complex
-                real-world scenarios.
+                Beyond simply scaling up models, several techniques have been proposed to enhance the physical realism of video world models. <a href="https://hila-chefer.github.io/videojam-paper.github.io/">VideoJAM</a> argues that the commonly used pixel reconstruction objective in diffusion models is insufficient for capturing physical coherence. To address this, it introduces a joint training approach that incorporates an additional optical flow denoising objective.
+                Another approach is dataset curation to emphasize rare, out-of-distribution events where physical accuracy is more important. For instance, <a href="https://anthonygosselin.github.io/Ctrl-Crash-ProjectPage/">Ctrl-Crash</a> fine-tunes a video diffusion model on car accident footage, enabling more realistic crash simulations.
             </p>
+
+            <h3 id="summary">Summary</h3>
+
+            <p>
+                I’ve outlined five key properties of video world models: causality, interactivity, persistence, real-time responsiveness, and physical accuracy, roughly in the order from most foundational to most challenging. The first two—causality and interactivity—are hard constraints. A world model has to be causal and interactive, while causality is more fundamental and is necessary for interactive controllability. Persistence is a soft constraint, existing on a spectrum; while the ideal world model needs to produce infinitely-long and fully consistent videos, even moderately persistent models are valuable in many applications. There are <strong>trade-offs between real-time responsiveness and physical accuracy</strong>, the two remaining properties: larger models tend to be more physically accurate but slower, while smaller models are necessary for real-time responsiveness but less physically accurate.
+                I expect <strong>different applications of world modeling will prioritize one over the other</strong>. For human entertainment, real-time responsiveness is essential and physical accuracy only needs to be good enough to fool human eyes. In contrast, for robotic learning, physical accuracy is paramount, while real-time simulation during model training is not really necessary.
+            </p>
+
+            <figure>
+                <img src="imgs/blog/pyramid.jpg" alt="Description">
+                <figcaption>Figure 8: Levels of video world models as a dual-head pyramid. There exists a trade-off between real-time responsiveness and physical accuracy, and I expect different applications will prioritize one over the other.</figcaption>
+            </figure>
+
+            <h2 id="other-approaches">Other Approaches to World Simulation</h2>
+            <p>
+                Video world models provide a promising new way to simulate the world, yet they are only one path. Conventional simulators couple a physics engine for dynamics with a renderer for imagery; platforms such as <a href="https://github.com/google-deepmind/mujoco">MuJoCo</a>, <a href="https://developer.nvidia.com/isaac">Isaac</a>, and <a href="https://github.com/Genesis-Embodied-AI/Genesis">Genesis</a> plug neatly into robotics-learning pipelines. Still, creating realistic scenes and task-specific worlds in these engines often involves substantial manual effort and limits flexibility. Recent works start to explore automated environment generation with LLM agents, potentially enabling rapid, on-demand creation of new scenarios.
+            </p>
+
+            <p>
+                Another approach of world modeling is to use a neural network to generate explicit 3D/4D world representations such as 3D/4D Gaussian Splatting. Latest research in this space includes <a href="https://snap-research.github.io/wonderland/">Wonderland</a>, <a href="https://kovenyu.com/wonderworld/">WonderWorld</a>, <a href="https://szymanowiczs.github.io/bolt3d">Bolt3D</a>, and many others. Startup companies such as <a href="https://www.worldlabs.ai/blog">World Labs</a> and <a href="https://www.spaitial.ai/">SpAItial</a> also appear to have works on this direction.
+            </p>
+
+            <figure>
+                <img src="imgs/blog/table.jpg" alt="Description">
+                <figcaption>Figure 9: Pros and cons of different world simulation approaches.</figcaption>
+            </figure>
+
+            <p>
+                Different approaches offer distinct strengths and limitations. Physics-based simulators excel at producing consistent and physically accurate environments, but they often require significant manual effort to model realistic, task-specific scenarios. Moreover, traditional rendering pipelines can struggle to achieve full photorealism. Neural 3D methods generate fast, 3D-consistent representations, yet they typically face challenges in modeling dynamic scenes. Meanwhile, video-based world models are highly adaptable to custom needs and capable of producing visually stunning, photorealistic outputs. However, achieving 3D consistency alongside real-time rendering—what I previously referred to as the challenge of "persistence" and "real-time"—remains an open problem.
+            </p>
+
+            <p>
+                <strong>Disclaimer:</strong> The author is not an expert in physics-based simulation or neural rendering. Please take my opinions here with a grain of salt.
+            </p>
+
+            <h2 id="conclusion">Conclusion</h2>
+
+            <h2 id="citation">Citation</h2>
+            <p>
+                If you find this blog post useful, please consider citing:
+            </p>
+            <div style="text-align: left; background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px; margin: 20px 0; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.5; overflow-x: auto;">
+                @article{huang2025towards,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;title={Towards Video World Models},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;author={Huang, Xun},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;journal={xunhuang.me},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;year={2025},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;url={https://www.xunhuang.me/world_model.html}<br>
+                }
+            </div>
+
+            <h2 id="references">References</h2>
         </div>
 
         <div class="toc-sidebar">
@@ -325,18 +565,14 @@
                 <li><a href="#video-world-models" class="toc-h2">Requirements for Video World Models</a>
                     <ul>
                         <li><a href="#causality" class="toc-h3">Causal</a></li>
-                        <li><a href="#interaction" class="toc-h3">Interactive</a></li>
+                        <li><a href="#interactive" class="toc-h3">Interactive</a></li>
                         <li><a href="#persistence" class="toc-h3">Persistent</a></li>
                         <li><a href="#real-time" class="toc-h3">Real-Time</a></li>
                         <li><a href="#physically-accurate" class="toc-h3">Physically Accurate</a></li>
+                        <li><a href="#summary" class="toc-h3">Summary</a></li>
                     </ul>
                 </li>
-                <li><a href="#types-of-world-models" class="toc-h2">Other Approaches to World Simulation</a>
-                    <ul>
-                        <li><a href="#physics-based-models" class="toc-h3">Simulation Platforms</a></li>
-                        <li><a href="#learned-models" class="toc-h3">Neural 3D/4D</a></li>
-                        <li><a href="#hybrid-models" class="toc-h3">Hybrid Models</a></li>
-                    </ul>
+                <li><a href="#other-approaches" class="toc-h2">Other Approaches to World Simulation</a>
                 </li>
                 <li><a href="#conclusion" class="toc-h2">Conclusion</a></li>
                 <li><a href="#citation" class="toc-h2">Citation</a></li>
@@ -365,6 +601,36 @@
         document.querySelectorAll('h2, h3').forEach((heading, index) => {
             if (!heading.id) {
                 heading.id = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+            }
+        });
+
+        // Tooltip functionality
+        const tooltip = document.getElementById('causality-modal');
+        const trigger = document.getElementById('causality-trigger');
+        const closeBtn = document.getElementById('causality-close');
+
+        trigger.addEventListener('click', function(event) {
+            event.stopPropagation();
+
+            // Get the position of the trigger element
+            const rect = trigger.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            // Position the tooltip near the trigger
+            tooltip.style.left = (rect.left + scrollLeft + 30) + 'px';
+            tooltip.style.top = (rect.top + scrollTop + 25) + 'px';
+            tooltip.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function() {
+            tooltip.style.display = 'none';
+        });
+
+        // Close tooltip when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!tooltip.contains(event.target) && event.target !== trigger) {
+                tooltip.style.display = 'none';
             }
         });
     </script>
