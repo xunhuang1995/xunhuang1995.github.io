@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Towards Video World Models</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.xunhuang.me/blogs/world_model.html">
+    <meta property="og:title" content="Towards Video World Models">
+    <meta property="og:description" content="Exploring the path from video generation to true video world models through causality, interactivity, persistence, real-time responsiveness, and physical accuracy.">
+    <meta property="og:image" content="https://www.xunhuang.me/imgs/blog/pyramid.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Diagram showing internal world model in human brain vs external world model simulation">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.xunhuang.me/blogs/world_model.html">
+    <meta property="twitter:title" content="Towards Video World Models">
+    <meta property="twitter:description" content="Exploring the path from video generation to true video world models through causality, interactivity, persistence, real-time responsiveness, and physical accuracy.">
+    <meta property="twitter:image" content="https://www.xunhuang.me/imgs/blog/pyramid.jpg">
+    <meta property="twitter:image:alt" content="Diagram showing internal world model in human brain vs external world model simulation">
+
+    <!-- Additional meta tags -->
+    <meta name="description" content="Exploring the path from video generation to true video world models through causality, interactivity, persistence, real-time responsiveness, and physical accuracy.">
+    <meta name="author" content="Xun Huang">
+    <meta name="keywords" content="world models, video generation, AI, machine learning, diffusion models, autoregressive models">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.xunhuang.me/blogs/world_model.html">
     <style>
         * {
             margin: 0;
@@ -328,21 +357,19 @@
             </figure>
 
             <p>
-                While this blog focuses on the second definition of world models—simulations that capture the structure of the world—I will briefly touch on the first for completeness.
-                <!-- There's ongoing debate about whether large language models (LLMs), trained solely on text, can truly understand the world.  -->
-                Though LLMs are regarded as a promising path toward general intelligence, many argue that its sole reliance on textual knowledge leaves critical gaps in their grasp of reality.
-                As Sergey Levine <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">analogizes</a> via Plato’s Allegory of the Cave, an LLM sees only the shadows—textual traces—of real-world events.
-                To build a truly grounded world model, an AI must go beyond text and engage with the world through vision, action, and interaction.
+                The first type of world model requires architectures that internalize world knowledge and perform reasoning and prediction in a semantic space. While LLMs are regarded as a promising path, many <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">argue</a> that its sole reliance on textual knowledge leaves critical gaps in their grasp of reality.
+                <!-- As Sergey Levine <a href="https://sergeylevine.substack.com/p/language-models-in-platos-cave">analogizes</a> via Plato’s Allegory of the Cave, an LLM sees only the shadows—textual traces—of real-world events. -->
+                A truly grounded world model must go beyond text and engage with the world through vision, action, and interaction.
                 Recent multimodal models like <a href="https://arxiv.org/abs/2402.08268">LWM</a>, which are trained on long-context text and video, show promise in this direction.
                 Similarly, LeCun’s JEPA series (<i>e.g.</i>, <a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/">V-JEPA 2</a>) advances this goal by predicting masked abstract video representations.
             </p>
             <p>
-                While simulating pixel-level details may not be essential for intelligence—<a href="https://www.facebook.com/share/p/1BBDeNBe8g/">as LeCun has argued</a>—there remain many applications that require high-fidelity world simulators. Realistic simulations enable robots to learn complex tasks without the cost and limitations of real-world interaction, and they can also provide human users with immersive, interactive experiences. In both cases, high-quality visuals are crucial: robots need detailed visual inputs to bridge the sim-to-real gap, while humans rely on realistic imagery to experience genuine immersion.
-                In robotics, internal world-understanding models and external simulation models can work together—robots can plan and act using internal models trained through interaction with realistic simulated environments.
+                While simulating pixel-level details may not be essential for intelligence—<a href="https://www.facebook.com/share/p/1BBDeNBe8g/">as LeCun has argued</a>—there remain many applications that require high-fidelity world simulators. Realistic simulations enable robots to learn complex tasks without the cost and limitations of real-world interaction, and they can also provide human users with immersive, interactive experiences. In both cases, high-quality visuals are crucial: robots need detailed visual inputs to bridge the sim-to-real gap, while humans need realistic visuals to experience true immersion.
+                In robotic learning, internal world understanding models and external simulation models can work together—robots can plan and act using internal world models that are learned through interaction with external world models that simulate the environment.
             </p>
 
             <div class="highlight">
-                <strong>Key Insight:</strong> "World model" is an overloaded term that can refer to either an internal world understanding model or an external world simulation model. Both models could be complementary in developing physical intelligence.
+                <strong>Key Insight:</strong> "World model" is an overloaded term that can refer to either an internal world understanding model or an external world simulation model. Both models can work together in the context of embodied AI.
             </div>
 
             <p>
@@ -361,7 +388,7 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             <p>
-                But why aren't current video generation models considered true world models yet? What precisely is lacking, and how can we bridge this gap? I argue that a true video world model must possess several key properties: <strong>causality, interactivity, persistence, real-time responsiveness, and physical accuracy</strong>. In the following sections, I explore each of these properties in detail, discussing why they are important and reviewing existing research on each topic.
+                But why aren't current video generation models considered true world models yet? What precisely is lacking, and how can we bridge this gap? I argue that a true video world model must be <strong>causal, interactive, persistent, real-time, and physical accurate</strong>. In the following sections, I examine each property in detail, highlighting its importance and reviewing relevant research.
             </p>
 
             <h3 id="causality">Causal</h3>
@@ -389,7 +416,7 @@
                  <span id="causality-close" style="position: absolute; right: 8px; top: 5px; color: #aaa; font-size: 18px; font-weight: bold; cursor: pointer;">&times;</span>
                  <h4 style="margin: 0 0 10px 0; color: #2c3e50; font-size: 1.1em;">Causality</h4>
                  <p style="color: #666; line-height: 1.5; margin: 0; font-size: 0.9em;">
-                     In this context, causality differs from the concept in causal machine learning, where the focus is on distinguishing causation from correlation. Instead, it refers to the unidirectional nature of time, where the past determines the future, not vice versa.
+                     In this context, causality refers to the unidirectional nature of time, where the past determines the future, not vice versa. It differs from the concept in causal machine learning, where the focus is on distinguishing causation from correlation.
                  </p>
              </div>
 
@@ -414,7 +441,7 @@
 
             <h3 id="interactive">Interactive</h3>
             <p>
-                 Interactive controllability is a defining characteristic for video world models. It refers to <strong>the ability to influence the future evolution of a simulated world through input that are injected on the fly</strong>. The nature of these controls varies across applications: a gamer might move characters and manipulate objects, a robot must execute motor commands supported by the hardware, while an autonomous vehicle makes steering and acceleration decisions. What unites these diverse scenarios is the fundamental requirement that the world model must respond dynamically to external interventions, adapting its predictions as new actions are introduced.
+                 Interactive controllability is a defining characteristic for video world models. It refers to <strong>the ability to influence the future through actions that are injected on the fly.</strong>. The nature of actions differs across applications: a gamer might move characters and manipulate objects, a robot must execute motor commands supported by the hardware, while an autonomous vehicle makes steering and acceleration decisions. What unites these diverse scenarios is the fundamental requirement that the world model must respond dynamically to external interventions, adapting its predictions as new actions are introduced.
              </p>
 
              <p>
@@ -423,7 +450,7 @@
              </p>
 
              <p>
-                A key challenge in enabling interactive controllability is obtaining paired training data—video frames aligned with corresponding actions. While this is relatively straightforward in gaming environments, it remains an open problem how to harness unlabeled, internet-scale video data to train world models with interactive controllability. <a href="https://sites.google.com/view/genie-2024/home">Genie</a> explored unsupervised action learning from unlabeled videos, and its successor, <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie-2</a> showed impressive results by leveraging AR-DiT architecture.
+                A central challenge in enabling interactive controllability is acquiring training data that aligns video frames with corresponding actions. While annotated data can be sourced from gaming environments, leveraging unlabeled, internet-scale video for training interactive world models remains an open problem. <a href="https://sites.google.com/view/genie-2024/home">Genie</a> explored unsupervised action learning from unlabeled videos, and its successor, <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie-2</a> showed impressive results by leveraging AR-DiT architecture.
              </p>
 
              <figure>
@@ -448,7 +475,7 @@
                 One common strategy introduces an inductive bias that aggressively compresses temporally distant frames, as in <a href="https://farlongctx.github.io/">FAR</a> and <a href="https://lllyasviel.github.io/frame_pack_gitpage/">FramePack</a>. While it works well for scenarios where the recent frames contain sufficient information for prediction, it might fail when crucial details are buried in earlier frames—resembling the "needle in a haystack" problem in LLMs.
                 Another line of work integrates video generation with persistent 3D conditions (<a href="https://research.nvidia.com/labs/toronto-ai/GEN3C/">Ren et al., 2025</a>, <a href="https://zqh0253.github.io/wvd/">Zhang et al., 2025</a>, <a href="https://spmem.github.io/">Wu et al., 2025</a>, <a href="https://arxiv.org/abs/2505.05495">Zhou et al., 2024</a>).
                 While effective in static scenes, these approaches struggle to model dynamic environments due to the complexity of representing explicit 4D structures.
-                Finally, a promising direction is to use a linear RNNs, such as state-space models to capture long-range temporal dependencies without increasing per-frame generation time, as first explored by <a href="https://ryanpo.com/ssm_wm/">Po et al., 2025</a>. Their approach integrates a linear RNN with 3D hidden states and incorporates local attention mechanisms, which closely resembles classic <a href="https://proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> architectures widely used for video prediction in the pre-transformer era.
+                Finally, a promising direction is to use a linear RNNs, such as state-space models to capture long-range temporal dependencies without increasing per-frame generation time, as first explored by <a href="https://ryanpo.com/ssm_wm/">Po et al., 2025</a>. Their approach integrates a linear RNN with 3D hidden states and incorporates local attention mechanisms, which is reminiscent of classic <a href="https://proceedings.neurips.cc/paper_files/paper/2015/file/07563a3fe3bbe7e3ba84431ad9d055af-Paper.pdf">ConvLSTM</a> architectures widely used for video prediction in the pre-transformer era.
             </p>
 
             <figure>
@@ -501,7 +528,7 @@
 
             <p>
                 Beyond simply scaling up models, several techniques have been proposed to enhance the physical realism of video world models. <a href="https://hila-chefer.github.io/videojam-paper.github.io/">VideoJAM</a> argues that the commonly used pixel reconstruction objective in diffusion models is insufficient for capturing physical coherence. To address this, it introduces a joint training approach that incorporates an additional optical flow denoising objective.
-                Another approach is dataset curation to emphasize rare, out-of-distribution events where physical accuracy is more important. For instance, <a href="https://anthonygosselin.github.io/Ctrl-Crash-ProjectPage/">Ctrl-Crash</a> fine-tunes a video diffusion model on car accident footage, enabling more realistic crash simulations.
+                Another approach is dataset curation to emphasize rare, out-of-distribution events where physical accuracy is more important. For instance, <a href="https://anthonygosselin.github.io/Ctrl-Crash-ProjectPage/">Ctrl-Crash</a> fine-tunes a video diffusion model on car accident footage, while <a href="https://github.com/vision-x-nyu/pisa-experiments">PISA</a> finetunes it on synthetic or real-world object dropping videos.
             </p>
 
             <h3 id="summary">Summary</h3>
@@ -531,7 +558,7 @@
             </figure>
 
             <p>
-                Different approaches offer distinct strengths and limitations. Physics-based simulators excel at producing consistent and physically accurate environments, but they often require significant manual effort to model realistic, task-specific scenarios. Moreover, traditional rendering pipelines can struggle to achieve full photorealism. Neural 3D methods generate fast, 3D-consistent representations, yet they typically face challenges in modeling dynamic scenes. Meanwhile, video-based world models are highly adaptable to custom needs and capable of producing visually stunning, photorealistic outputs. However, achieving 3D consistency alongside real-time rendering—what I previously referred to as the challenge of "persistence" and "real-time"—remains an open problem. In short term, it might be fruitful to develop hybrid models that combine the strengths of different paradigms. For example, <a href="https://kyleleey.github.io/WonderPlay/">WonderPlay</a> combines physics-based simulators, 3D Gaussian representations, and video diffusion models together to produce photorealistic worlds with physically accurate dynamics.
+                Different approaches offer distinct strengths and limitations. Physics-based simulators are more effective at producing consistent and physically realistic results, but they often require manual effort to design task-specific scenarios. Moreover, traditional rendering pipelines can struggle to deliver full photorealism within real-time computational constraints. Neural 3D methods generate 3D-consistent representations that are fast to render, yet they typically face challenges in modeling dynamic scenes. Meanwhile, video-based world models are highly adaptable to custom needs and capable of producing visually stunning, photorealistic outputs. However, achieving 3D consistency alongside real-time rendering—what I previously referred to as the challenge of "persistence" and "real-time"—remains an open problem. In short term, it might be fruitful to develop hybrid models that combine the strengths of different paradigms. For example, <a href="https://kyleleey.github.io/WonderPlay/">WonderPlay</a> combines physics-based simulators, 3D Gaussian representations, and video diffusion models together to produce photorealistic worlds with physically accurate dynamics.
             </p>
 
             <p>
@@ -555,45 +582,50 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;url={https://www.xunhuang.me/blogs/world_model.html}<br>
                 }
             </div>
+            <h2 id="ackowledgements">Acknowledgements</h2>
+            <p>
+                I would like to thank Hong-Xing Yu and Beidi Chen for their valuable feedback.
+            </p>
 
             <h2 id="references">References</h2>
             <ol>
                 <li>Alonso et al., 2024, <a href="https://arxiv.org/abs/2405.12399">Diffusion for World Modeling: Visual Details Matter in Atari</a></li>
+                <li>Assran et al., 2025, <a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/">V‑JEPA 2: Video World Model Benchmarks</a></li>
                 <li>Bar et al., 2025, <a href="https://arxiv.org/abs/2412.03572">Navigation World Models</a></li>
                 <li>Bruce et al., 2024, <a href="https://arxiv.org/abs/2402.15391">Genie: Generative Interactive Environments</a></li>
                 <li>Che et al., 2025, <a href="https://gamegen-x.github.io/">GameGen‑X: Interactive Open‑world Game Video Generation</a></li>
+                <li>Chefer et al., 2025, <a href="https://arxiv.org/abs/2502.02492">VideoJAM: Joint Appearance‑Motion Representations for Enhanced Video Generation</a></li>
                 <li>Chen et al., 2024, <a href="https://arxiv.org/abs/2407.01392">Diffusion Forcing: Next‑token Prediction Meets Full‑Sequence Diffusion</a></li>
                 <li>Feng et al., 2024, <a href="https://arxiv.org/abs/2412.03568">The Matrix: Infinite‑Horizon World Generation with Real‑Time Moving Control</a></li>
+                <li>Gosselin et al., 2025, <a href="https://arxiv.org/abs/2506.00227">Ctrl‑Crash: Controllable Diffusion for Realistic Car Crashes</a></li>
                 <li>Gu et al., 2025, <a href="https://arxiv.org/abs/2503.19325">Long‑Context Autoregressive Video Modeling with Next‑Frame Prediction</a></li>
                 <li>Ha et al., 2018, <a href="https://papers.nips.cc/paper/7512-recurrent-world-models-facilitate-policy-evolution">Recurrent World Models Facilitate Policy Evolution</a></li>
                 <li>Hafner et al., 2020, <a href="https://arxiv.org/abs/1912.01603">Dream to Control: Learning Behaviors by Latent Imagination</a></li>
                 <li>Hafner et al., 2021, <a href="https://arxiv.org/abs/2010.02193">Mastering Atari with Discrete World Models</a></li>
+                <li>Hong et al., 2022, <a href="https://arxiv.org/abs/2205.15868">CogVideo: Large‑Scale Pre‑Training for Text‑to‑Video Generation</a></li>
                 <li>Hu et al., 2023, <a href="https://arxiv.org/abs/2309.17080">GAIA‑1: A Generative World Model for Autonomous Driving</a></li>
+                <li>Huang et al., 2025, <a href="https://arxiv.org/abs/2506.08009">Self‑Forcing: Bridging the Train‑Test Gap in Autoregressive Video Diffusion</a></li>
                 <li>Kang et al., 2024, <a href="https://arxiv.org/abs/2411.02385">How Far Is Video Generation from World Model? A Physical‑Law Perspective</a></li>
+                <li>Kondratyuk et al., 2023, <a href="https://sites.research.google/videopoet/">VideoPoet: A Simple Modeling Method for High‑Quality Video Generation</a></li>
                 <li>Li et al., 2025, <a href="https://arxiv.org/abs/2506.17201">Hunyuan‑GameCraft: High‑Dynamic Interactive Game Video Generation with Hybrid History Condition</a></li>
+                <li>Li et al., 2025, <a href="https://arxiv.org/abs/2505.18151">WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions</a></li>
+                <li>Li et al., 2025, <a href="https://arxiv.org/pdf/2503.09595">Pisa Experiments: Exploring Physics Post-Training for Video Diffusion Models by Watching Stuff Drop</a></li>
+                <li>Liang et al., 2025, <a href="https://arxiv.org/abs/2412.12091">Wonderland: Navigating 3D Scenes from a Single Image</a></li>
                 <li>Lin et al., 2025, <a href="https://arxiv.org/abs/2506.09350">Autoregressive Adversarial Post‑Training for Real‑Time Interactive Video Generation</a></li>
                 <li>Liu et al., 2024, <a href="https://arxiv.org/abs/2402.08268">World Model on Million‑Length Video and Language with Blockwise RingAttention</a></li>
-                <li>Assran et al., 2025, <a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/">V‑JEPA 2: Video World Model Benchmarks</a></li>
                 <li>Parker‑Holder et al., 2025, <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/">Genie‑2: A Large‑Scale Foundation World Model</a></li>
                 <li>Po et al., 2025, <a href="https://arxiv.org/abs/2505.20171">Long‑Context State‑Space Video World Models</a></li>
                 <li>Ren et al., 2025, <a href="https://arxiv.org/abs/2503.03751">GEN3C: 3D‑Informed World‑Consistent Video Generation with Precise Camera Control</a></li>
+                <li>Szymanowicz et al., 2025, <a href="https://szymanowiczs.github.io/bolt3d">Bolt3D: Generating 3D Scenes in Seconds</a></li>
+                <li>Teng et al., 2025, <a href="https://arxiv.org/abs/2505.13211">MAGI‑1: Autoregressive Video Generation at Scale</a></li>
                 <li>Valevski et al., 2024, <a href="https://arxiv.org/abs/2408.14837">Diffusion Models Are Real‑Time Game Engines</a></li>
-                <li>Huang et al., 2025, <a href="https://arxiv.org/abs/2506.08009">Self‑Forcing: Bridging the Train‑Test Gap in Autoregressive Video Diffusion</a></li>
                 <li>Wu et al., 2025, <a href="https://arxiv.org/abs/2506.05284">Video World Models with Long‑term Spatial Memory</a></li>
-                <li>Zhang et al., 2024, <a href="https://arxiv.org/abs/2412.01821">World‑Consistent Video Diffusion with Explicit 3D Modeling</a></li>
                 <li>Yin et al., 2024, <a href="https://arxiv.org/abs/2311.18828">One‑Step Diffusion with Distribution Matching Distillation</a></li>
+                <li>Yin et al., 2025, <a href="https://arxiv.org/abs/2412.07772">From Slow Bidirectional to Fast Autoregressive Video Diffusion Models</a></li>
+                <li>Yu et al., 2024, <a href="https://arxiv.org/abs/2406.09394">WonderWorld: Interactive 3D Scene Generation from a Single Image</a></li>
+                <li>Zhang et al., 2024, <a href="https://arxiv.org/abs/2412.01821">World‑Consistent Video Diffusion with Explicit 3D Modeling</a></li>
                 <li>Zhang et al., 2025, <a href="https://arxiv.org/abs/2504.12626">Packing Input Frame Context in Next‑Frame Prediction Models for Video Generation</a></li>
                 <li>Zhou et al., 2025, <a href="https://arxiv.org/abs/2505.05495">Learning 3D Persistent Embodied World Models</a></li>
-                <li>Liang et al., 2025, <a href="https://arxiv.org/abs/2412.12091">Wonderland: Navigating 3D Scenes from a Single Image</a></li>
-                <li>Yu et al., 2024, <a href="https://arxiv.org/abs/2406.09394">WonderWorld: Interactive 3D Scene Generation from a Single Image</a></li>
-                <li>Szymanowicz et al., 2025, <a href="https://szymanowiczs.github.io/bolt3d">Bolt3D: Generating 3D Scenes in Seconds</a></li>
-                <li>Li et al., 2025, <a href="https://arxiv.org/abs/2505.18151">WonderPlay: Dynamic 3D Scene Generation from a Single Image and Actions</a></li>
-                <li>Yin et al., 2025, <a href="https://arxiv.org/abs/2412.07772">From Slow Bidirectional to Fast Autoregressive Video Diffusion Models</a></li>
-                <li>Chefer et al., 2025, <a href="https://arxiv.org/abs/2502.02492">VideoJAM: Joint Appearance‑Motion Representations for Enhanced Video Generation</a></li>
-                <li>Gosselin et al., 2025, <a href="https://arxiv.org/abs/2506.00227">Ctrl‑Crash: Controllable Diffusion for Realistic Car Crashes</a></li>
-                <li>Teng et al., 2025, <a href="https://arxiv.org/abs/2505.13211">MAGI‑1: Autoregressive Video Generation at Scale</a></li>
-                <li>Kondratyuk et al., 2023, <a href="https://sites.research.google/videopoet/">VideoPoet: A Simple Modeling Method for High‑Quality Video Generation</a></li>
-                <li>Hong et al., 2022, <a href="https://arxiv.org/abs/2205.15868">CogVideo: Large‑Scale Pre‑Training for Text‑to‑Video Generation</a></li>
 
             </ol>
         <style>
@@ -627,8 +659,6 @@
                 <li><a href="#other-approaches" class="toc-h2">Other Approaches to World Simulation</a>
                 </li>
                 <li><a href="#conclusion" class="toc-h2">Conclusion</a></li>
-                <li><a href="#citation" class="toc-h2">Citation</a></li>
-                <li><a href="#references" class="toc-h2">References</a></li>
             </ul>
         </div>
     </div>
